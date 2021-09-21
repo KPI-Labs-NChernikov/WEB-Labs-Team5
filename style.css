@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+}
+
+header {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.logo h1 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.logo {
+    background-image: url("background-header.png");
+    color: white;
+    position: relative;
+}
+
+.info a
+{
+    color: white !important;
+    text-decoration: none;
+}
+
+.info {
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-align: center;
+}
+
+.photos {
+    position: absolute;
+    min-width: 10%;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 2em;
+    height: 2em;
+    background-color: #2b2b2b;
+    top: 50%;
+    right: 5%;
+    border: 1px solid white;
+    border-radius: 15px;
+    transform: translateY(-50%);
+}
+
+nav {
+    border-top: 10px solid #2b2b2b;
+    border-bottom: 10px solid #2b2b2b;
+    background-color: #2b2b2b;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lab-nav-block {
+    max-width: min-content;
+    max-height: fit-content;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+   }
+
+   header nav a:hover {
+    color: #d3d3d3 !important;
+}
+
+header nav a:visited {
+    color: #bdbcbc;
+   }
+
+   header nav a:active {
+    color: #d3d3d3;
+   }
+
+   aside a {
+    color: white;
+    text-decoration: none;
+   }
+
+aside a:hover {
+    color: #d3d3d3 !important;
+}
+
+aside a:visited {
+    color: #bdbcbc;
+   }
+
+   aside a:active {
+    color: #d3d3d3;
+   }
+
+.line-container {
+    position: relative;
+}
+
+.line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 2.5em;
+    margin-left: 1px;
+    margin-right: 1px;
+    background-color: white;
+}
+
+main {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-image: url("background.png");
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lab-nav {
+    width: 17.5%;
+    margin-right: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 28px;
+    text-align: left;
+}
+
+.nav-block {
+    border: 10px solid #2b2b2b;
+    border-radius: 15px;
+    background-color: #2b2b2b;
+    font-family: 'Open Sans Condensed', sans-serif;
+    align-items: flex-end;
+}
+
+.nav-subblock {
+    width: 80%;
+    margin-left: 20%;
+    border: 10px solid #2b2b2b;
+    border-radius: 15px;
+    background-color: #2b2b2b;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.lab {
+    all: initial;
+    width: 60%;
+    margin-left: 3%;
+    border: 10px solid #2b2b2b;
+    background-color: white;
+}
+
+.lab-body-iframe {
+    width: 100%;
+    min-height: 80vh;
+    border: none;
+}
+
+.all-labs-info {
+    width: 80%;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 28pt;
+    font-weight: 300;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.main-description {
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+}
+
+.gallery {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6vw;
+}
+
+.photoframe {
+    width: 12vw;
+    height: 16vw;
+    border: 3px solid #2b2b2b;
+    background-color: #2b2b2b;
+    border-radius: 15px;
+}
+
+.photoframe img {
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    object-fit:cover;
+    object-position: center center;
+}
