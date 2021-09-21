@@ -7,14 +7,6 @@
     color: white;
 }
 
-.lab h1 {
-    text-align: center;
-}
-
-.lab h2 {
-    text-align: center;
-}
-
-.lab h3 {
+.lab h1, .lab h2, .lab h3 {
     text-align: center;
 }
