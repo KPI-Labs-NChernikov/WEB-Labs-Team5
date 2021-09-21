@@ -169,7 +169,7 @@ main {
     background-color: white;
 }
 
-.lab-body-iframe {
+iframe.lab-body {
     width: 100%;
     min-height: 80vh;
     border: none;
