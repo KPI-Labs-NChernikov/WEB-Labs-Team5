@@ -1,0 +1,390 @@
+*{margin: 0;} 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    background-color: #151515;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.55);
+    height: 100px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+header a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: 0.25s linear;
+}
+
+nav a:hover {
+    text-shadow: 0 0 40px #fff;
+}
+
+nav {
+    display: flex;
+    margin-left: 151px;
+    gap: 120px;
+    font-size: 18pt;
+    font-weight: bold;
+    justify-content: center;
+}
+
+.logo {
+    margin-left: 50px;
+    height: 100px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+.name {
+    margin-left: 31px;
+    font-weight: 800;
+}
+
+.name h1 {
+    font-size: 28pt;
+}
+
+main {
+    min-height: 500px;
+}
+
+.poster {
+    position: relative;
+    width: 100vw;
+    min-height: 1024px;
+    background-image: url("movies/breaking-bad-2008/poster.png");
+    background-size: cover;
+    background-position: center center;
+}
+
+.poster-info {
+    width: 100vw;
+    min-height: 35%;
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    right:0;
+    top: 65%;
+}
+
+.poster-info-text {
+    width: 92%;
+    height: 100%;
+    color: #fff;
+    margin: 60px 4%;
+    text-overflow: ellipsis;
+}
+
+.poster-info-text h2 {
+    font-size: 32pt;
+}
+
+.poster-info-text p {
+    font-size: 17pt;
+    font-weight: bold;
+}
+
+.poster a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: 0.25s linear;
+}
+
+.poster a:hover {
+    text-shadow: 0 0 40px #fff;
+}
+
+.big-outer-triangle {
+    width: 0;
+    height: 0;
+    border-top: 76px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 76px solid #828282;
+    position: absolute;
+    top: 40%;
+    margin-left: 46px;
+    margin-right: 46px;
+}
+
+.big-inner-triange {
+    position: relative;
+    top: -59px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-top: 59px solid transparent;
+    border-bottom: 58px solid transparent;
+    border-right: 59px solid #4a4410;
+    transition: 0.35s linear; 
+}
+
+.big-inner-triange:hover {
+    border-right: 58px solid #828282;
+    cursor: pointer;
+}
+
+#triangleRightOuter1 {
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.movies {
+    width: 100vw;
+    min-height: 900px;
+    text-align: center;
+}
+
+.movies h2{
+    color: #ffdd2f;
+    font-size: 28pt;
+}
+
+figcaption {
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12pt;
+    border-left: 2px solid #636363;
+    border-right: 2px solid #636363;
+    background-color: #727272;
+}
+
+.filmBlock a { 
+    display: block; 
+    position: relative; 
+}
+
+.filmBlock a:after 
+{ 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0;
+    transition: 0.5s linear; 
+}
+
+.filmBlock a:before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: url(icon-path); 
+    opacity: 0; 
+}
+
+.filmBlock a:hover:before,
+.filmBlock a:hover:after { opacity: 1; }
+
+.film-carousel {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #2b2b2b;
+}
+
+.affiche {
+    height: 19.27vw;
+    width: 14.45vw;
+    overflow: hidden;
+}
+
+.rectangeBlock {
+    height: 16pt;
+    width: 6.5vw;
+    background-color: #727272;
+}
+
+figure img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+#rectLeft {
+    border-right: 2px solid #636363;
+}
+
+#rectRight {
+    border-left: 2px solid #636363;
+}
+
+.small-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 42px 48px 0;
+    border-color: transparent #808080 transparent transparent;
+    transition: 0.35s linear;
+    margin-top: calc((19.27vw - 48px * 2) / 2);
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+#triangleRight2, #triangleRight3 {
+    transform: rotate(180deg);
+}
+
+.small-triangle:hover {
+    cursor: pointer;
+    border-color: transparent #424242 transparent transparent;
+}
+
+footer {
+    width: 100vw;
+    min-height: 659px;
+}
+
+footer h2 {
+    margin-left: 56px;
+    margin-right: 56px;
+    color: white;
+    font-weight: 800;
+    font-size: 26pt;
+}
+
+.main-info p {
+    margin-left: 90px;
+    margin-right: 90px;
+    font-size: 18pt;
+    color: white;
+    font-weight: 600;
+}
+
+footer h3 {
+    color: #ffdd2f;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+footer h2 a {
+    color: #ffdd2f !important;
+    text-decoration: none !important;
+}
+
+footer p a {
+    color: #ffdd2f !important;
+    text-decoration: underline;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacts {
+    padding: 20px 35px;
+    width: 41vw;
+    margin-left: 3.125px;
+    border: 1px solid #8a8a8a;
+    border-radius: 15px;
+    text-transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info {
+    padding: 20px 35px;
+    width: 41vw;
+    margin-right: 3.125px;
+    border: 1px solid #8a8a8a;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.info a {
+    color: #cccccc !important;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: #fff !important;
+}
+
+.cabinet-button p {
+    margin: 5px 10px;
+}
+
+.cabinet-button {
+    max-width: fit-content;
+    color: white !important;
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    transform: scaleX(1.2);
+    transition: 0.4s linear;
+}
+
+.cabinet-button:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: black !important;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-left: 10px;
+    display: flex;
+    gap: 80px;
+    margin-top: -8px;
+}
+
+.contacts a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+.contacts img {
+    float: left;
+}
+
+.contact-info-text {
+    margin-left: 8px;
+    float: left;
+}
+
+#phones {
+    margin-top: -5px;
+}
+
+address {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.under-construction {
+    height: 100%;
+    padding-top: 240px;
+    padding-bottom: 240px;
+    font-size: 32pt;
+    text-align: center;
+    color: #fff;
+}
