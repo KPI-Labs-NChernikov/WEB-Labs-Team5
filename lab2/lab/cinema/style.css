@@ -158,14 +158,13 @@ main {
 }
 
 figcaption {
-    width: 14.4vw;
+    width: 222px;
     height: 16pt;
     overflow: hidden;
     color: #fff;
     text-align: center;
     font-weight: bold;
     font-size: 12pt;
-
     background-color: #727272;
 }
 
@@ -216,8 +215,8 @@ figure {
 }
 
 .affiche {
-    height: 19.2vw;
-    width: 14.4vw;
+    height: 296px;
+    width: 222px;
     overflow: hidden;
 }
 
