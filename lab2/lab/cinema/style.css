@@ -15,13 +15,32 @@ header {
     position: fixed;
     width: 100vw;
     background-color: rgba(0, 0, 0, 0.55);
-    height: 100px;
+    min-height: 100px;
     display: flex;
     align-items: center;
     margin: 0;
     padding: 0;
     z-index: 1;
+    flex-wrap: wrap;
 }
+
+@media (max-width: 1100px) {
+    header {
+        min-height: 250px;
+    }
+    nav {
+        margin-top: -75px;
+    }
+  } 
+
+  @media (max-width: 650px) {
+    header {
+        min-height: 275px;
+    }
+    nav {
+        margin-top: -200px;
+    }
+  } 
 
 header a {
     color: #ffffff !important;
@@ -36,10 +55,15 @@ nav a:hover {
 nav {
     display: flex;
     margin-left: 151px;
-    gap: 120px;
     font-size: 18pt;
     font-weight: bold;
     justify-content: center;
+    flex-wrap: wrap;
+    max-height: 30px;
+}
+
+.nav-item {
+    margin: 0 60px;
 }
 
 .logo {
@@ -75,6 +99,12 @@ main {
     background-position: center center;
     display: flex;
     align-items: flex-end;
+}
+
+@media (max-width: 650px) {
+    .poster {
+        padding-top: 275px;
+    }
 }
 
 .poster-info {
@@ -121,6 +151,13 @@ main {
     top: 40%;
     margin-left: 46px;
     margin-right: 46px;
+}
+
+
+@media (max-width: 650px) {
+    .big-outer-triangle {
+        top: 25%;
+    }
 }
 
 .big-inner-triange {
@@ -371,6 +408,34 @@ address {
     text-decoration: none !important;
     font-style: normal;
     font-weight: 500;
+}
+
+@media (max-width: 650px) {
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons {
+        gap: 20px;
+    }
+    .info {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .contacts {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    .contacts img{
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .footer-info {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }
 
 .under-construction {
