@@ -158,12 +158,14 @@ main {
 }
 
 figcaption {
+    width: 14.4vw;
+    height: 16pt;
+    overflow: hidden;
     color: #fff;
     text-align: center;
     font-weight: bold;
     font-size: 12pt;
-    border-left: 2px solid #636363;
-    border-right: 2px solid #636363;
+
     background-color: #727272;
 }
 
@@ -196,26 +198,27 @@ figcaption {
     opacity: 0; 
 }
 
+figure {
+    border-left: 2px solid #636363;
+    border-right: 2px solid #636363;
+}
+
 .filmBlock a:hover:before,
 .filmBlock a:hover:after { opacity: 1; }
 
 .film-carousel {
     display: flex;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     flex-wrap: wrap;
     background-color: #2b2b2b;
 }
 
 .affiche {
-    height: 19.27vw;
-    width: 14.45vw;
+    height: 19.2vw;
+    width: 14.4vw;
     overflow: hidden;
-}
-
-.rectangeBlock {
-    height: 16pt;
-    width: 6.5vw;
-    background-color: #727272;
 }
 
 figure img {
@@ -240,7 +243,6 @@ figure img {
     border-width: 48px 42px 48px 0;
     border-color: transparent #808080 transparent transparent;
     transition: 0.35s linear;
-    margin-top: calc((19.27vw - 48px * 2) / 2);
     margin-left: 25px;
     margin-right: 25px;
 }
