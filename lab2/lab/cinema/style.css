@@ -73,15 +73,15 @@ main {
     background-image: url("movies/breaking-bad-2008/poster.png");
     background-size: cover;
     background-position: center center;
+    display: flex;
+    align-items: flex-end;
 }
 
 .poster-info {
     width: 100vw;
     min-height: 35%;
     background-color: rgba(0, 0, 0, 0.55);
-    position: absolute;
-    right:0;
-    top: 65%;
+    overflow:hidden;
 }
 
 .poster-info-text {
