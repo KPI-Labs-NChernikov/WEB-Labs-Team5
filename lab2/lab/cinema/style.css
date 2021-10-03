@@ -417,6 +417,7 @@ address {
     }
     .buttons {
         gap: 20px;
+        flex-direction: column;
     }
     .info {
         padding-left: 50px;
