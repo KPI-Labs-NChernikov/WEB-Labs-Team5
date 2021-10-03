@@ -195,7 +195,7 @@ main {
 }
 
 figcaption {
-    width: 222px;
+    width: 219px;
     height: 16pt;
     overflow: hidden;
     color: #fff;
@@ -252,8 +252,8 @@ figure {
 }
 
 .affiche {
-    height: 296px;
-    width: 222px;
+    height: 292px;
+    width: 219px;
     overflow: hidden;
 }
 
