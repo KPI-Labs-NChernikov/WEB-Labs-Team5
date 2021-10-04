@@ -116,6 +116,7 @@ main {
 @media (max-width: 650px) {
     .poster {
         padding-top: 500px;
+        background-image: url("movies/breaking-bad-2008/affiche.jpg");
     }
 }
 
