@@ -103,7 +103,7 @@ main {
 
 @media (max-width: 650px) {
     .poster {
-        padding-top: 275px;
+        padding-top: 500px;
     }
 }
 
@@ -156,7 +156,7 @@ main {
 
 @media (max-width: 650px) {
     .big-outer-triangle {
-        top: 25%;
+        top: 22.5%;
     }
 }
 
