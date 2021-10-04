@@ -438,10 +438,12 @@ address {
         flex-direction: column;
     }
     .info {
+        min-width: 200px;
         padding-left: 20px;
         padding-right: 20px;
     }
     .contacts {
+        min-width: 200px;
         padding-left: 20px;
         padding-right: 20px;
     }
