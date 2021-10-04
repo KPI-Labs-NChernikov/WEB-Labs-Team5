@@ -42,12 +42,15 @@ header {
     }
     nav {
         margin-left: -50px;
-        margin-top: -155px;
+        margin-top: -170px;
     }
     .logo {
         position: fixed;
         left: -15px;
         top: 150px;
+    }
+    .name {
+        margin-top: -25px;
     }
   } 
 
