@@ -38,19 +38,19 @@ header {
 
   @media (max-width: 635px) {
     header {
-        min-height: 290px;
+        min-height: 250px;
     }
     nav {
         margin-left: -50px;
-        margin-top: -170px;
+        margin-top: -200px;
     }
     .logo {
         position: fixed;
         left: -15px;
-        top: 150px;
+        top: 100px;
     }
     .name {
-        margin-top: -25px;
+        margin-top: -50px;
     }
   } 
 
