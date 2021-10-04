@@ -41,14 +41,14 @@ header {
         min-height: 225px;
     }
     nav {
-        margin-top: -440px;
+        margin-top: -430px;
     }
     .logo {
         position: fixed;
         top: 75px;
     }
     .name {
-        margin-top: 200px;
+        margin-top: 215px;
         margin-bottom: 25px;
     }
   } 
