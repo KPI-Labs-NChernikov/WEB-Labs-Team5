@@ -1,0 +1,56 @@
+p {
+    color: green;
+}
+
+p.sel {
+    color: gray;
+}
+
+#iden {
+    color: red;
+}
+
+b + i {
+    color: magenta;
+}
+
+p > strong {
+    color: olive;
+}
+
+q[title] {
+    color: cyan;
+}
+
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+ul {
+    list-style-type: square;
+}
+
+p.back {
+    color: blue;
+    background-color: yellow;
+}
+
+p.marg {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 50px;
+    margin-left: 50px;
+    outline: 5px dotted green;
+}
+
+p.padd {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-right: 50px;
+    padding-left: 50px;
+    outline: 5px dotted green;
+}
+
+img {
+    float: left;
+}
