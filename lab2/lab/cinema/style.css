@@ -207,7 +207,7 @@ main {
 }
 
 figcaption {
-    width: 219px;
+    width: 165px;
     height: 16pt;
     overflow: hidden;
     color: #fff;
@@ -246,6 +246,12 @@ figcaption {
     opacity: 0; 
 }
 
+.unitedBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
 figure {
     border-left: 2px solid #636363;
     border-right: 2px solid #636363;
@@ -264,12 +270,12 @@ figure {
 }
 
 .affiche {
-    height: 292px;
-    width: 219px;
+    height: 220px;
+    width: 165px;
     overflow: hidden;
 }
 
-figure img {
+.affiche img {
     height: 100%;
     width: 100%;
     object-fit: cover;
