@@ -26,19 +26,30 @@ header {
 
 @media (max-width: 1100px) {
     header {
-        min-height: 200px;
+        min-height: 125px;
     }
     nav {
-        margin-top: -100px;
+        margin-top: -115px;
+    }
+    .name {
+        margin-top: -60px;
     }
   } 
 
   @media (max-width: 650px) {
     header {
-        min-height: 275px;
+        min-height: 225px;
     }
     nav {
-        margin-top: -200px;
+        margin-top: -440px;
+    }
+    .logo {
+        position: fixed;
+        top: 75px;
+    }
+    .name {
+        margin-top: 200px;
+        margin-bottom: 25px;
     }
   } 
 
