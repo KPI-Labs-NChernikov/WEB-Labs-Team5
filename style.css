@@ -169,6 +169,10 @@ main {
     background-color: white;
 }
 
+.lab h1, .lab h2 {
+    text-align: center;
+}
+
 iframe.lab-body {
     width: 100%;
     min-height: 80vh;
@@ -188,8 +192,12 @@ img {
 }
 
 .main-description {
-    margin-left: 1.5em;
-    margin-right: 1.5em;
+    margin-left: 3em;
+    margin-right: 3em;
+}
+
+.main-description h1, .main-description h2, .main-description h3 {
+    text-align: center;
 }
 
 .gallery {

@@ -1,3 +1,8 @@
 .theory {
     margin-left: 5%;
+    margin-right: 5%;
+}
+
+.theory h1, .theory h2, .theory h3 {
+    text-align: center;
 }

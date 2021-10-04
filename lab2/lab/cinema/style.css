@@ -468,3 +468,9 @@ address {
     text-align: center;
     color: #fff;
 }
+
+@media (max-width: 650px) {
+    .under-construction {
+        font-size: 24pt;
+    }
+}
