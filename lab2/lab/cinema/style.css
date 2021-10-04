@@ -432,12 +432,12 @@ address {
         flex-direction: column;
     }
     .info {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .contacts {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 20px;
+        padding-right: 20px;
     }
     .contacts img{
         margin-bottom: 10px;
