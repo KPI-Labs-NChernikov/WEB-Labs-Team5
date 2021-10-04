@@ -98,6 +98,10 @@ nav {
     font-size: 28pt;
 }
 
+.name h1:hover {
+    color: #ffdd2f;
+}
+
 main {
     min-height: 500px;
 }
