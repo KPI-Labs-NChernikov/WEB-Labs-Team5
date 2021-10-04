@@ -36,20 +36,18 @@ header {
     }
   } 
 
-  @media (max-width: 650px) {
+  @media (max-width: 635px) {
     header {
-        min-height: 225px;
+        min-height: 290px;
     }
     nav {
-        margin-top: -430px;
+        margin-left: -50px;
+        margin-top: -155px;
     }
     .logo {
         position: fixed;
-        top: 75px;
-    }
-    .name {
-        margin-top: 215px;
-        margin-bottom: 25px;
+        left: -15px;
+        top: 150px;
     }
   } 
 
