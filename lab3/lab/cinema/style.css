@@ -248,6 +248,12 @@ main {
     font-size: 28pt;
 }
 
+@media (max-width: 650px) {
+    .movies h2{
+        font-size: 22pt;
+    }
+}
+
 figcaption {
     width: 165px;
     height: 16pt;
