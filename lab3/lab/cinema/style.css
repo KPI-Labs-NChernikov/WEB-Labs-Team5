@@ -387,7 +387,6 @@ figure {
 
 footer {
     width: 100vw;
-    min-height: 659px;
 }
 
 footer h2 {
@@ -423,6 +422,7 @@ footer p a {
 }
 
 .footer-info {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     gap: 20px;
@@ -560,7 +560,6 @@ address {
     .footer-info {
         padding-left: 50px;
         padding-right: 50px;
-        margin-bottom: 50px;
     }
 }
 
