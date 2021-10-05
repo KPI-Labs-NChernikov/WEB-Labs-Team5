@@ -249,6 +249,12 @@ main {
     }
 }
 
+@media (max-width: 1200px) {
+    .big-outer-triangle {
+        top: 20%;
+    }
+}
+
 #triangleRightOuter1 {
     position: absolute;
     right: 0;
@@ -550,10 +556,11 @@ address {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
     .footer-info {
         padding-left: 50px;
         padding-right: 50px;
+        margin-bottom: 50px;
     }
 }
 
