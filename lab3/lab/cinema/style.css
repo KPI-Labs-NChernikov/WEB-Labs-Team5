@@ -494,6 +494,7 @@ address {
     .buttons {
         gap: 20px;
         flex-direction: column;
+        align-items: center;
     }
     .info {
         margin-left: 0;
@@ -511,6 +512,12 @@ address {
     }
     .contacts img{
         margin-bottom: 10px;
+    }
+
+    .cabinet-button {
+        margin-left: -10px;
+        min-width: 160px;
+        text-align: center;
     }
 }
 
