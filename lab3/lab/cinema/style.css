@@ -182,9 +182,14 @@ main {
 
 @media (max-width: 650px) {
     .poster {
-        padding-top: 500px;
+        padding-top: 25px;
         background-image: url("movies/breaking-bad-2008/affiche.jpg");
     }
+    
+    .poster-info-text {
+        margin: 30px 4%;
+    }
+
     .poster-info-text h2 {
         font-size: 26pt;
     }
@@ -207,13 +212,6 @@ main {
     margin-right: 46px;
 }
 
-
-@media (max-width: 650px) {
-    .big-outer-triangle {
-        top: 22.5%;
-    }
-}
-
 .big-inner-triange {
     position: relative;
     top: -59px;
@@ -227,8 +225,28 @@ main {
 }
 
 .big-inner-triange:hover {
-    border-right: 58px solid #828282;
+    border-right-color: #828282;
     cursor: pointer;
+}
+
+
+@media (max-width: 650px) {
+    .big-outer-triangle {
+        margin-left: 16px;
+        margin-right: 16px;
+        top: 17.5%;
+        border-top: 49px solid transparent;
+        border-bottom: 48px solid transparent;
+        border-right: 49px solid #828282;
+    }
+
+    .big-inner-triange {
+        top: -39px;
+        left: 8px;
+        border-top: 39px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-right: 39px solid #4a4410;
+    }
 }
 
 #triangleRightOuter1 {
@@ -290,7 +308,6 @@ figcaption {
     left: 0; 
     right: 0; 
     bottom: 0; 
-    background: url(icon-path); 
     opacity: 0; 
 }
 
@@ -339,6 +356,18 @@ figure {
     transition: 0.35s linear;
     margin-left: 25px;
     margin-right: 25px;
+}
+
+@media (max-width: 650px) {
+    .triangleBlock {
+        width: 165px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+    }
+    .small-triangle {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
 }
 
 #triangleRight2, #triangleRight3 {
