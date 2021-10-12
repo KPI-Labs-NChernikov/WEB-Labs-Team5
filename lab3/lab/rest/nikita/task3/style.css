@@ -249,7 +249,7 @@ img {
     margin-right: 10px;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 768px) {
     .photo {
         float: none;
         width: 303px;
