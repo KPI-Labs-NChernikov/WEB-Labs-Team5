@@ -1,0 +1,244 @@
+body
+{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+
+
+.nav{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLink1{
+    margin: 20px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    width: 19%;
+    padding: 8px;
+    transition: color .2s linear;
+}
+
+.navLink1:hover{
+    color:#FF9639;
+}
+
+.navLink2{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    width: 10%;
+    padding: 8px;
+    transition: color .2s linear;
+}
+
+.navLink2:hover{
+    color:#FF9639;
+}
+
+.navLink3{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    width: 17%;
+    padding: 8px;
+    transition: color .2s linear;
+}
+
+.navLink3:hover{
+    color:#FF9639;
+}
+
+.navLink4{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgb(0, 0, 0);
+    border: black;
+    width: 17%;
+    padding: 8px;
+    transition: color .2s linear;
+}
+
+.navLink4:hover{
+    color:#FF9639;
+}
+
+.kyivButton{
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 19px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #2D2D2D;
+    border: none;
+    width: 25%;
+    height: 40px;
+    transition: color .2s linear;
+}
+
+.kyivButton:hover{
+    color:#FF9639;
+}
+
+.headText{
+    float: inline-left;
+    font-size: 30px;
+    text-transform: uppercase;
+    line-height: 35px;
+    align-self: flex-start;
+}
+
+.shkola{
+    font-size: 120px;
+    -webkit-text-stroke-color: #3298F2;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-fill-color: transparent;
+    text-transform: uppercase; 
+}
+
+.school_container{
+    margin-left: 20px;
+    margin-right: 20px;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.programuvannya{
+    line-height: 0;
+    text-transform: uppercase;
+    font-size: 50px;
+    text-align: right;
+    -webkit-text-fill-color: #000;
+    -webkit-text-stroke-color: transparent;
+}
+
+.smallText{
+    display: block;
+    margin-top: 9px;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 13px;
+    position: absolute;
+    ;
+}
+
+/*main*/
+
+.main{
+    margin-top: 70px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    background-color: #EDF4FB;
+}
+
+.container{
+   width: 100%;
+   max-width: 1440px;
+   margin: 0 auto;
+}
+
+.vidguky{
+    margin: 40px;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+}
+
+.yakist{
+    font-size: 30px;
+    color: #FF9639;
+}
+
+.mainText{
+    max-width: 800px;
+    padding-left: 17%;
+    margin: 15px;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 17px;
+    align-self: center;
+    text-align: justify;
+}
+
+.pictures{
+    margin-left: 30px;
+    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+
+.incora{
+    margin-left: 75px;
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.second_block{
+    background-color: #292929;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-content: center;
+    padding-bottom: 50px;
+}
+
+.courses{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.kursy{
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #FF9639; 
+    margin-bottom: 30px;
+}
+
+.napryamky{
+    align-self: center;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #fff;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0;
+    padding-top: 10px;
+    background-color: #000;
+}

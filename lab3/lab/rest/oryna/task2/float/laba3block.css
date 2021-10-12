@@ -1,0 +1,44 @@
+body{
+    text-align: center;
+    font-size: large;
+    font-weight: 700;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.main{
+    height: 600px;
+}
+.one{
+    background-color: rgb(97, 99, 224);
+    width: 100%;
+    height: 80px;
+}
+
+.two{
+    float: left;
+    width: 25%;
+    height: 100%;
+    background-color: rgb(241, 210, 70);
+}
+.right_part{
+    width: 75%;
+    height: 100%;
+    float: right;
+}
+
+.three{
+    width: 100%;
+    background-color: rgb(97, 99, 224);
+    height: 80px;
+}
+
+.four{
+    height: 80%;
+    background-color: #fff;
+}
+
+.five{
+    height: 20%;
+    background-color: rgb(241, 210, 70);
+}
