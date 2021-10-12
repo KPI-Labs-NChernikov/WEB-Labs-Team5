@@ -179,6 +179,12 @@ iframe.lab-body {
     border: none;
 }
 
+iframe.code {
+    width: 100%;
+    min-height: 100vh;
+    border: none;
+}
+
 .all-labs-info {
     width: 80%;
     font-family: 'Open Sans Condensed', sans-serif;

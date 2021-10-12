@@ -10,3 +10,15 @@
 .lab h1, .lab h2, .lab h3 {
     text-align: center;
 }
+
+.lab a{
+    color: white;
+}
+
+.lab a:hover{
+    color:silver;
+}
+
+.lab a:visited{
+    color: silver;
+}
