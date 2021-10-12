@@ -1,0 +1,61 @@
+html, body {
+    height:100%; 
+    margin:0px; 
+    padding:0px; 
+}
+header{
+    height: 30px;
+    background-color: rgb(255, 199, 57);
+    line-height: 30px;
+}
+div{
+    border:1px solid black;
+    font-weight: bold;
+}
+div[align="right"]{
+    padding: 0 300px 0 0;
+    background-color: rgb(255, 199, 57);
+    white-space: nowrap;
+    overflow: hidden;
+}
+.white{
+    width: 300px;
+    height: 20px;
+    background-color: white;
+    margin: 5px 0px 5px 100px;
+    border: 1px solid black;
+    float: left;
+}
+p{
+    text-align: center;
+}
+nav{
+    margin-top: 5px;
+    line-height: 36em;
+    height: 90%;
+}
+nav>div{
+    float: left;
+    width: 23.6%;
+    height: 100%;
+    text-align: center;
+}
+.blank{
+    border: 1px solid white;
+    width: 1.5%;
+}
+.lowheight{
+    height: 30px;
+    padding: 0px 0px 0px 200px;
+    background-color: rgb(255, 199, 57);
+}
+footer{
+    margin-top: 5px;
+    line-height: 30px;
+}
+.blue{
+    background-color: royalblue;
+}
+.red{
+    background-color: tomato;
+}

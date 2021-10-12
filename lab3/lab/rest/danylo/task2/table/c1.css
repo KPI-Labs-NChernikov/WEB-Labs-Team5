@@ -1,0 +1,48 @@
+html, body {
+    height:100%; 
+    margin:0px; 
+    padding:0px; 
+}
+
+table{
+    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+}
+td{
+    border: 1px solid black;
+    font-weight: bold;
+}
+.lowheight1{
+    height: 30px;
+    background-color: rgb(255, 199, 57);
+    line-height: 30px;
+}
+.lowheight{
+    height: 30px;
+    padding: 0px 0px 0px 200px;
+    background-color: rgb(255, 199, 57);
+}
+div[align="right"]{
+    padding: 0 300px 0 0;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.blue{
+    background-color: royalblue;
+}
+.red{
+    background-color: tomato;
+}
+.white{
+    width: 300px;
+    height: 20px;
+    background-color: white;
+    margin: 5px 0px 5px 100px;
+    border: 1px solid black;
+    float: left;
+}
+.blank{
+    width: 20px;
+    border: 0px solid black;
+}
