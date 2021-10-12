@@ -1,0 +1,43 @@
+*{margin: 0;} 
+
+body {
+    overflow-x: hidden;
+}
+
+p {
+    font-family: 'Times New Roman', serif;
+    font-size: 64pt;
+    font-weight: bold;
+    margin-left: 10rem;
+}
+
+table {
+    border-collapse: collapse;
+    width: 90%;
+    height: 133.33vw;
+}
+
+td {
+    border: 5px solid black;
+}
+
+#sidebar {
+    width: 22%;
+    background-color: #ffcc00;
+}
+
+#header {
+    height: 15%;
+    background-color: #0066ff;
+    color: white;
+}
+
+#main {
+    width: 78%;
+}
+
+#footer {
+    height: 15%;
+    background-color: #0066ff;
+    color: white;
+}

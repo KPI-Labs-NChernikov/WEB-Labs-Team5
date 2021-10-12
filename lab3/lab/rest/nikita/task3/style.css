@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+*{margin: 0;} 
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    padding-top: 7px;
+    background-color: #eeeeee;
+}
+
+header a {
+    text-decoration: none !important;
+}
+
+.name-info {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.name-info a {
+    color: #4299d2 !important;
+    font-size: 16pt;
+}
+
+.name-text {
+    display: flex;
+    align-items: baseline;
+}
+
+nav {
+    padding-left: 8%;
+    padding-right: 8%;
+    clear: both;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+header nav {
+    background-color: white;
+    padding-top: 10px;
+    margin-bottom: 10px;
+    gap: 30px;
+}
+
+header .nav-block{
+    background: linear-gradient(#44b3dd, #3ca8d9, #39a7d9);
+    border: 1px solid #5dd7ee;
+    height: 50px;
+    line-height: 50px;
+    min-width: 150px;
+    text-align: center;
+}
+
+header .nav-block a{
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s linear;
+}
+
+header .nav-block a:hover{
+    color: #c1bdbd;
+}
+
+.logo {
+    float: left;
+    height: 75px;
+    width: 75px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+.working-hours {
+    margin-right: 4px;
+    width: 50%;
+    text-align: right;
+}
+
+.working-hours h2 {
+    color: #2b1892;
+    font-size: 12pt;
+}
+
+.name {
+    width: 50%;
+}
+
+.posters {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    background-color: #eeeeee;
+    padding: 16px 8%;
+    border-bottom: 2px solid #dcdcdc;
+}
+
+.poster {
+    width: 344px;
+    padding: 20px 32px;
+}
+
+#courses-nav {
+    background-color: #319ed3;
+}
+
+#courses-nav a{
+    color: white;
+    text-decoration: none !important;
+    border-bottom: 1px solid white;
+    padding-bottom: 3px;
+    font-size: 14pt;
+    line-height: 2em;
+    transition: 0.15s linear;
+}
+
+#courses-nav a:hover{
+    color: #c1bdbd;
+    border-bottom: 1px solid #c1bdbd;
+}
+
+#courses-nav li {
+    list-style-type: none;
+    padding-bottom: 4px;
+}
+
+#courses-nav ul {
+    margin: 0px !important;
+    padding-left: 0px !important;
+    padding-bottom: 4px;
+}
+
+#promo {
+    background-color: #fba000;
+}
+
+.poster h3 {
+    font-size: 16pt;
+    font-weight: 800;
+    line-height: 35px;
+}
+
+#promo h4 {
+    font-size: 14pt;
+    font-weight: 600;
+    line-height: 30px;
+}
+
+#promo p {
+    text-indent: 1em;
+    font-size: 14pt;
+}
+
+.big-icon {
+    float: left;
+    width: 35px;
+    height: 35px;
+}
+
+.small-icon {
+    float: left;
+    width: 30px;
+    height: 30px;
+    margin-right: 4px;
+}
+
+#find {
+    background-color: #cb3536;
+}
+
+#find {
+    color: #f3b7b4;
+}
+
+#find a{
+    color: #f3b7b4;
+}
+
+#find a:hover{
+    color: #f97a6c;
+}
+
+#find a:visited{
+    color: #f97a6c;
+}
+
+#find p {
+    font-size: 12pt;
+    line-height: 1.6em;
+}
+
+.search-form {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.search-form input {
+    width: 99%;
+    height: 50px;
+    border: 5px solid #cfbebf;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    font-size: 12pt;
+    font-weight: 600;
+    text-indent: 5px;
+}
+
+.search-form input:active {
+    border-color: grey;
+}
+
+.search-form input:focus {
+    border-color: grey;
+}
+
+.description {
+    margin-top: 30px;
+    padding-bottom: 30px;
+}
+
+.description h3{
+    text-align: center;
+    font-size: 22pt;
+}
+
+.description-text {
+    width: 84%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.photo {
+    float: left;
+    width: 420px;
+    height: 280px;
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+@media (max-width: 650px) {
+    .photo {
+        float: none;
+        width: 303px;
+        height: 202px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+  } 
+
+.description-text p {
+    font-size: 16pt;
+    text-align: justify;
+}
+
+.delimiter {
+    height: 10px;
+}
+
+footer {
+    clear: both;
+    margin-top: 3%;
+    margin-bottom: 20px;
+}
+
+footer nav {
+    background-color: white;
+    gap: 35px;
+}
+
+footer .nav-block{
+    background-color: #eeeeee;
+    border: 2px solid #d8d8d8;
+    height: 46px;
+    line-height: 46px;
+    min-width: 280px;
+    text-align: center;
+}
+
+footer .nav-block a{
+    text-decoration: none !important;
+    color: #0d506a;
+    font-weight: 500;
+    font-size: 20px;
+    transition: 0.3s linear;
+}
+
+footer .nav-block a:hover{
+    color: grey;
+}
