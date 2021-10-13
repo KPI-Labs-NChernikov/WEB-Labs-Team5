@@ -10,6 +10,9 @@ p {
     font-size: 64pt;
     font-weight: bold;
     margin-left: 10rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 aside {
@@ -51,10 +54,4 @@ footer {
     background-color: #0066ff;
     color: white;
     margin-bottom: 0;
-}
-
-.text-center {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
 }
