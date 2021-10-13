@@ -206,6 +206,10 @@ img {
     text-align: center;
 }
 
+.main-description p {
+    text-align: justify;
+}
+
 .gallery {
     margin-top: 30px;
     display: flex;

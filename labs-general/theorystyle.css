@@ -6,3 +6,7 @@
 .theory h1, .theory h2, .theory h3 {
     text-align: center;
 }
+
+.theory p {
+    text-align: justify;
+}
