@@ -1,0 +1,41 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+table {
+    border: 1px solid #000;
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.one {
+    height: 15%;
+    background-color: blue;
+}
+
+.two {
+    height: 70%;
+    width: 20%;
+    background-color: yellow;
+}
+
+.three {
+    height: 15%;
+    background-color: blue;
+    width: 100%;
+}
+
+.four {
+    background-color: white;
+}
+
+.five {
+    height: 15%;
+    width: 80%;
+    background-color: yellow;
+}
