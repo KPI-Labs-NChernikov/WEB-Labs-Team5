@@ -217,6 +217,13 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     gap: 6vw;
+    text-align: center;
+}
+
+figcaption {
+    width: 180px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14pt;
 }
 
 .photoframe {
