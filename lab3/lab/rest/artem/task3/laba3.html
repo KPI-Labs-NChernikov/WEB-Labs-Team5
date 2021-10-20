@@ -19,21 +19,21 @@
 <body>
     <header class="headline">
         <nav class="nav">
-            <form action="#">
-                <button class="navLink1" type="submit">Форми навчання</button>
-            </form>
-            <form action="#">
-                <button class="navLink2" type="submit">Заходи</button>
-            </form>
-            <form action="#">
-                <button class="navLink3" type="submit">Про академію</button>
-            </form>
-            <form action="#">
-                <button class="navLink4" type="submit">Контакти</button>
-            </form>
-            <form action="#">
-                <button class="navLink5" type="submit">Київ</button>
-            </form>
+            <div class="navLink">
+                <a href="laba3.html">Форми навчання</a>
+            </div>
+            <div class="navLink">
+                <a href="laba3.html">Заходи</a>
+            </div>
+            <div class="navLink">
+                <a href="laba3.html">Про академія</a>
+            </div>
+            <div class="navLink">
+                <a href="laba3.html">Контакти</a>
+            </div>
+            <div class="navLink">
+                <a href="laba3.html">Київ</a>
+            </div>
         </nav>
 
         <div class="school_container">
@@ -59,7 +59,7 @@
     </header>
 
     <div class="main">
-        <div class="container">
+        <div class="review_container">
             <div class="reviews">
                 відгуки від роботодавців
                 <div class="quality">
@@ -73,16 +73,18 @@
                 </div>
             </div>
             <div class="container">
-                <div class="pictures">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rAjeTqlInM4"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                    <img src="images/companies.png" width="55%" alt="Не загрузилось))">
-                </div>
-                <div class="incora">
-                    <p>Відгук INCORA про випускників Okten</p>
-                </div>
+                <figure class="pictures">
+                    <div>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/rAjeTqlInM4"
+                            title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
+                    <figcaption class="incora">
+                        <p>Відгук INCORA про випускників Okten</p>
+                    </figcaption>
+                </figure>
+                <img class="image" src="images/companies.png" width="55%" alt="Не загрузилось))">
             </div>
         </div>
     </div>
@@ -101,12 +103,13 @@
         </div>
     </div>
 
-    <div class="footer">
-        <a href=#> <img src="images/Frame 9.png" alt="не загрузилось))"></a>
-        <a href=#> <img src="images/vk.png" alt="не загрузилось))"></a>
-        <a href=#> <img src="images/yt.png" alt="не загрузилось))"></a>
-        <a href=#> <img src="images/tg.png" alt="не загрузилось))"></a>
-        <a href=#> <img src="images/ig.png" alt="не загрузилось))"></a>
+    <div class="footer_wrapper">
+        <div class="footer">
+            <a href=#> <img src="images/vk.png" alt="не загрузилось))"></a>
+            <a href=#> <img src="images/yt.png" alt="не загрузилось))"></a>
+            <a href=#> <img src="images/tg.png" alt="не загрузилось))"></a>
+            <a href=#> <img src="images/ig.png" alt="не загрузилось))"></a>
+        </div>
     </div>
 </body>
 
