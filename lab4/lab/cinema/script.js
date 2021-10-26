@@ -91,35 +91,46 @@ function fillMovies() {
 }
 
 function changePoster() {
-    let currentFilmId = 1;
-    const delay = 10000;
+    const delay = 15000;
     let timerId = setInterval(function() {
-      let poster = document.querySelector(".poster");
-      let fader = poster.querySelector(".fader");
-      let posterText = poster.querySelector(".poster-info-text");
-      posterText.innerHTML = null;
-      let previewImage;
-      if (document.documentElement.clientWidth > 650)
-        previewImage = movies[currentFilmId].getPoster();
-      else
-        previewImage = movies[currentFilmId].getAffiche();
-      poster.style.backgroundImage = `url(${previewImage})`;
-      let url = document.createElement('a');
-      url.href = movies[currentFilmId].getUrl();
-      let header = document.createElement('h2');
-      header.innerHTML = movies[currentFilmId].getName();
-      url.appendChild(header);
-      posterText.appendChild(url);
-      posterText.appendChild(document.createElement('br'));
-      let text = document.createElement('p');
-      text.innerHTML = movies[currentFilmId].getDescription();
-      posterText.appendChild(text);
         if (currentFilmId < movies.length - 1)
             currentFilmId++;
         else
             currentFilmId = 0;
+        let posterText = poster.querySelector(".poster-info-text");
+        posterText.innerHTML = null;
+        changePosterImage(condition);
+        if (addEvent)
+        {
+            condition.onchange = (e) => {
+                changePosterImage(e);
+            };
+            addEvent = false;
+        }
+        let url = document.createElement('a');
+        url.href = movies[currentFilmId].getUrl();
+        let header = document.createElement('h2');
+        header.innerHTML = movies[currentFilmId].getName();
+        url.appendChild(header);
+        posterText.appendChild(url);
+        posterText.appendChild(document.createElement('br'));
+        let text = document.createElement('p');
+        text.innerHTML = movies[currentFilmId].getDescription();
+        posterText.appendChild(text);
     }, delay);
 }
 
+function changePosterImage(condition) {
+    if (condition.matches)
+        previewImage = movies[currentFilmId].getAffiche();
+    else
+        previewImage = movies[currentFilmId].getPoster();
+    poster.style.backgroundImage = `url(${previewImage})`;
+}
+
+let currentFilmId = 0;
+let poster = document.querySelector(".poster");
 fillMovies();
+var condition = window.matchMedia("(max-width: 650px)");
+let addEvent = true;
 changePoster();
