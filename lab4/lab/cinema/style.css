@@ -137,7 +137,6 @@ main {
 .poster {
     position: relative;
     width: 100vw;
-    min-height: 1024px;
     background-image: url("movies/breaking-bad-2008/poster.png");
     background-size: cover;
     background-position: center center;
@@ -150,6 +149,7 @@ main {
     min-height: 35%;
     background-color: rgba(0, 0, 0, 0.55);
     overflow:hidden;
+    margin-top: 35%;
 }
 
 .poster-info-text {
@@ -180,12 +180,22 @@ main {
     text-shadow: 0 0 40px #fff;
 }
 
+@media (max-width: 1200px) {
+    .poster-info {
+        margin-top: 55%;
+    }
+}
+
 @media (max-width: 650px) {
     .poster {
         padding-top: 25px;
         background-image: url("movies/breaking-bad-2008/affiche.jpg");
     }
     
+    .poster-info {
+        margin-top: 100%;
+    }
+
     .poster-info-text {
         margin: 30px 4%;
     }
@@ -207,7 +217,7 @@ main {
     border-bottom: 75px solid transparent;
     border-right: 76px solid #828282;
     position: absolute;
-    top: 40%;
+    top: 35%;
     margin-left: 46px;
     margin-right: 46px;
 }
