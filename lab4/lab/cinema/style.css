@@ -167,6 +167,7 @@ main {
 .poster-info-text p {
     font-size: 17pt;
     font-weight: bold;
+    text-align: justify;
 }
 
 .poster a {

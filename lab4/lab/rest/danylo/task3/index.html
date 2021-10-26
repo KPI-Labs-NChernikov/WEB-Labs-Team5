@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        function getData() {
+            let data = new Date(document.getElementById('data').valueAsDate);
+            let day = parseInt(data.getDate());
+            let month = parseInt(data.getMonth()) + 1;
+            let year = parseInt(data.getFullYear());
+            if (day != 1 && month != 1 && year != 1970) {
+                console.log("Ви обрали дату: ");
+                console.log(day + "." + month + "." + year);
+            } else {
+                console.log("Ви ввели некоректні дані!");
+            }
+        }
+    </script>
+    <title>Task3</title>
+</head>
+<body>
+    <input id="data" type="date"/>
+    <br><br>
+    <input type="button" value="Обрати дату" onclick="getData()">
+</body>
+</html>
