@@ -110,39 +110,27 @@
             </aside>
             <div class="lab">
                 <div class="theory">
-                    <h1>Способи функціонального застосування JavaScript</h1>
+                    <h1>Вставка (тег SCRIPT)</h1>
                     <h2>Пояснення:</h2>
-                    <p>Є 3 основні способи функціонального застосування JS:</p>
-                    <ul>
-                        <li>
-                            Схема URL
-                        </li>
-                        <li>
-                            Обробник подій
-                        </li>
-                        <li>
-                            Вставка (тег Script)
-                        </li>
-                    </ul>
-                    <h2>Посилання: </h2>
-                    <p><a href="lab/rest/team-task/index.html" target="_blank">Завдання 2</a></p>
+                    <p>Сценарій на JavaScript включається в документ за допомогою тега &lt;script&gt;.<br/>
+                        <pre><code>
+&lt;head&gt;<br/>
+    &lt;script&gt;<br/>
+        &lt;!--   ...<br/>
+        оператори 
+        сценарію<br/>
+        ...   --&gt;<br/>
+    &lt;/script&gt;<br/>
+&lt;/head&gt;
+                        </code></pre>
+                        <br/>Розміщення сценарію в розділ head документа призводить до того, що сценарій буде завантажений до того, як буде потрібно його виконати.<br/>Код сценарію розміщують в теги коментаря html для того, щоб старі браузери, які не розуміють JavaScript, не відображали цей код на екрані.<br/>Регістр, в якому написані літери, в JavaScript має значення.<br/>Сам тег &lt;script&gt; включає атрибут language, який визначає мову і набуває таких значень: language = &quot;javascript&quot; або type=”text/javascript”.<br/></p>
                     <h2>Код HTML:</h2>
-                    <iframe class="code" src="lab/rest/team-task-code/html.html"></iframe>
+                    <iframe class="code" src="lab/rest/team-task-code/script/html.html"></iframe>
                     <br>
                     <h2>Код JS:</h2>
-                    <iframe class="code" src="lab/rest/team-task-code/js.html"></iframe>
+                    <iframe class="code" src="lab/rest/team-task-code/script/js.html"></iframe>
                     <br>
-                    <h2>Скріншот схеми URL:</h2>
-                    <div class="code">
-                        <img src="lab/rest/team-task/url.png" alt="Скріншот схеми URL">
-                    </div>
-                    <br>
-                    <h2>Скріншот обробника подій:</h2>
-                    <div class="code">
-                        <img src="lab/rest/team-task/handler.png" alt="Скріншот обробника подій">
-                    </div>
-                    <br>
-                    <h2>Скріншот вставки (тег SCRIPT):</h2>
+                    <h2>Скріншот:</h2>
                     <div class="code">
                         <img src="lab/rest/team-task/script.png" alt="Скріншот вставки (тег SCRIPT)">
                     </div>

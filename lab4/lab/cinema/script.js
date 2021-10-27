@@ -91,7 +91,7 @@ function fillMovies() {
 }
 
 function changePosterInterval() {
-    const delay = 15000;
+    const delay = 20000;
     let timerId = setInterval(function() {
         scrollPosterRight();
     }, delay);
