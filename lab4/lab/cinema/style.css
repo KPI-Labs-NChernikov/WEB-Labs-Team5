@@ -230,7 +230,7 @@ main {
     height: 0;
     border-top: 59px solid transparent;
     border-bottom: 58px solid transparent;
-    border-right: 59px solid rgba(0, 0, 0, 0.8);
+    border-right: 59px solid rgba(0, 0, 0, 0.7);
     transition: 0.35s linear; 
 }
 
@@ -254,7 +254,7 @@ main {
         left: 8px;
         border-top: 39px solid transparent;
         border-bottom: 40px solid transparent;
-        border-right: 39px solid rgba(0, 0, 0, 0.8);
+        border-right: 39px solid rgba(0, 0, 0, 0.7);
     }
 }
 
