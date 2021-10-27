@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Danylo | 4 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>let n = prompt(&quot;Введіть кількість елементів в масиві&quot;);<br/>console.log(n);<br/>let arr = [];<br/>let copyArr = [];<br/>for (let i = 0; i &lt; n; i++) {<br/>    arr[i] = Math.floor(Math.random() * 10);<br/>    copyArr[i] = arr[i];<br/>}<br/>console.log(&quot;Початковий масив: &quot;);<br/>console.log(arr);<br/>let max = Math.max.apply(Math, arr);<br/>let min = Math.min.apply(Math, arr);<br/>console.log(&quot;Максимальний елемент: &quot;);<br/>console.log(max);<br/>console.log(&quot;Мінімальний елемент: &quot;);<br/>console.log(min);<br/>let inMax = arr.indexOf(max);<br/>let inMin = arr.indexOf(min);<br/>let sum = 0;<br/>if(inMin &lt; inMax){<br/>    for (let i = inMin + 1; i &lt; inMax; i++) {<br/>        sum += arr[i];<br/>    }<br/>} else{<br/>    for (let i = inMax + 1; i &lt; inMin; i++) {<br/>        sum += arr[i];<br/>    }<br/>}<br/>console.log(&quot;Сума елементів між максимальним та мінімальним значеням: &quot;);<br/>console.log(sum);<br/><br/>function quicksort(array) {<br/>    if (array.length &lt;= 1) {<br/>        return array;<br/>    }<br/>    var pivot = array[0];<br/>    var left = [];<br/>    var right = [];<br/>    for (var i = 1; i &lt; array.length; i++) {<br/>        array[i] &lt; pivot ? left.push(array[i]) : right.push(array[i]);<br/>    }<br/>    return quicksort(left).concat(pivot, quicksort(right));<br/>};<br/><br/>arr = quicksort(arr);<br/>console.log(&#39;Початковий масив: &#39;);<br/>console.log(copyArr);<br/>console.log(&#39;Відсортований масив за допомогою швидкого сортування: &#39;);<br/>console.log(arr);</code></pre>
+        </main>
+    </body>
+</html>

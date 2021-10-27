@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Nikita | 4 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>function processArray() {<br/>    const entered = parseInt(enterSize(), 10);<br/>    if (!isNaN(entered) &amp;&amp; entered &gt; 0) {<br/>        alert(&#39;Відкрийте консоль, щоб побачити вхідний та вихідний масиви&#39;);<br/>        const array = [];<br/>        for (let i = 0; i &lt; entered; i++)<br/>            array.push(Math.floor(Math.random() * 100));<br/>        console.log(&#39;Вхідний масив:&#39;);<br/>        console.log(`(${array.length}) [${array.join(&#39;, &#39;)}]`);<br/>        moveMinimal(array);<br/>        console.log(&#39;Після перенесення мінімального елементу на перше місце:&#39;);<br/>        console.log(`(${array.length}) [${array.join(&#39;, &#39;)}]`);<br/>        selectionSortReversed(array);<br/>        console.log(&#39;Вихідний масив:&#39;);<br/>        console.log(`(${array.length}) [${array.join(&#39;, &#39;)}]`);<br/>    }<br/>    else {<br/>        alert(&#39;Введено не число або введене число не є натуральним&#39;);<br/>    }<br/>}<br/><br/>function enterSize() {<br/>    return prompt(&#39;Введіть кількість елементів масиву&#39;, 0);<br/>}<br/><br/>function moveMinimal(array) {<br/>    if (!Array.isArray(array))<br/>        return;<br/>    if (array.length &gt; 0)<br/>    minPos = 0;<br/>    for (let i = 1; i &lt; array.length; i++)<br/>        if (array[i] &lt; array[minPos])<br/>            minPos = i;<br/>    for (let i = minPos; i &gt; 0; i--)<br/>        swapArrayItems(array, i, i - 1);<br/>}<br/><br/>function swapArrayItems(array, pos1, pos2)<br/>{<br/>    if (!Array.isArray(array) || !Number.isInteger(pos1) || !Number.isInteger(pos2) || pos1 &lt; 0 || pos1 &gt;= array.length|| pos2 &lt; 0 || pos2 &gt;= array.length)<br/>        return;<br/>    let temp = array[pos1];<br/>    array[pos1] = array[pos2];<br/>    array[pos2] = temp;<br/>}<br/><br/>function selectionSortReversed(array) <br/>{<br/>    if (!Array.isArray(array))<br/>        return;<br/>    for (let i = 0; i &lt; array.length - 1; i++) {<br/>        let maxPos = i;<br/>        for (let j = i + 1; j &lt; array.length; j++)<br/>            if (array[j] &gt; array[maxPos])<br/>                maxPos = j;<br/>        if (maxPos != i)<br/>            swapArrayItems(array, i, maxPos);<br/>    }<br/>}</code></pre>
+        </main>
+    </body>
+</html>

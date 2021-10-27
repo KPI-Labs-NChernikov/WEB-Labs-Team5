@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Oryna | 6 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>let timer;<br/>function setAl(comp){<br/>	let time = document.getElementById(&#39;alarmTime&#39;).valueAsNumber;<br/> <br/>	let alarm = new Date(time);<br/>	let alTime = new Date(alarm.getUTCFullYear(), alarm.getUTCMonth(), alarm.getUTCDate(), alarm.getUTCHours(), alarm.getUTCMinutes(), alarm.getUTCSeconds());<br/>	let dur = alTime.getTime() - (new Date()).getTime();<br/> <br/>	if(dur &lt;= 0){<br/>		alert(&#39;Wrong input&#39;);<br/>		return;<br/>	}<br/> <br/>	timer = setTimeout(initAl, dur);<br/>	comp.innerHTML = &quot;Cancel Alarm&quot;;<br/>} <br/><br/>function initAl(){<br/>	alert(&quot;!!ALARM!!&quot;);<br/>	document.getElementById(&#39;alarmButton&#39;).style.display = &#39;none&#39;;<br/>}<br/>  <br/>function cancelAl(comp){<br/>	comp.innerHTML = &quot;Set Alarm&quot;;<br/>	clearTimeout(timer);<br/>}<br/></code></pre>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Artem | 6 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>var timer;<br/><br/>function setAlarm(elem) {<br/>    var time = document.getElementById(&#39;alarmTime&#39;).valueAsNumber;<br/>    if (isNaN(time)) {<br/>        alert(&quot;Invalid DateTime&quot;);<br/>        return;<br/>    }<br/><br/>    var alarm = new Date(time);<br/>    var alarmTime = new Date(alarm.getUTCFullYear(), alarm.getUTCMonth(), alarm.getUTCDate(), alarm.getUTCHours(), alarm.getUTCMinutes(), alarm.getUTCSeconds());<br/>    var duration = alarmTime.getTime() - (new Date()).getTime();<br/><br/>    if (duration &lt; 0) {<br/>        alert(&#39;Time is already passed&#39;);<br/>        return;<br/>    }<br/><br/>    timer = setTimeout(initAlarm, duration);<br/>    elem.innerHTML = &quot;Cancel Alarm&quot;;<br/>    elem.setAttribute(&#39;onclick&#39;, &#39;cancelAlarm(this);&#39;);<br/>}<br/><br/>function cancelAlarm(elem) {<br/>    elem.innerHTML = &quot;Set Alarm&quot;;<br/>    elem.setAttribute(&#39;onclick&#39;, &#39;setAlarm(this);&#39;);<br/>    clearTimeout(timer);<br/>}<br/><br/>function initAlarm() {<br/>    alert(&quot;Alert&quot;);<br/>}</code></pre>
+        </main>
+    </body>
+</html>

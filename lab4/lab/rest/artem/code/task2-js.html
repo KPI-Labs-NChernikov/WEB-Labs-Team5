@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Artem | 4 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>function generate(arr, n) { // generate array with random numbers<br/>    for (let i = 0; i &lt; n; i++) {<br/>        let value = Math.floor(Math.random() * 10);<br/>        arr.push(value);<br/>    }<br/>    return arr;<br/>}<br/><br/>function findMin(arr1, arr2) {<br/>    let arrEqual = [];<br/>    for (let i = 0; i &lt; arr1.length; i++) {<br/>        for (let j = 0; j &lt; arr1.length; j++) {<br/>            if (arr1[i] == arr2[j]) {<br/>                arrEqual.push(arr1[i]);<br/>                break;<br/>            }<br/>        }<br/>    }<br/>    return Math.min(...arrEqual);<br/>}<br/><br/>function bubbleSort(inputArr) {<br/>    let len = inputArr.length;<br/>    for (let i = 0; i &lt; len; i++) {<br/>        for (let j = 0; j &lt; len; j++) {<br/>            if (inputArr[j] &gt; inputArr[j + 1]) {<br/>                let tmp = inputArr[j];<br/>                inputArr[j] = inputArr[j + 1];<br/>                inputArr[j + 1] = tmp;<br/>            }<br/>        }<br/>    }<br/>    return inputArr;<br/>}<br/><br/>let n = prompt(&quot;Enter number of elements in an array: &quot;);<br/>let arr1 = [], arr2 = [], arr3 = [];<br/>result1 = generate(arr1, n);<br/>result2 = generate(arr2, n);<br/><br/>console.log(&quot;First array: &quot; + result1);<br/>console.log(&quot;Second array: &quot; + result2);<br/><br/>console.log(&quot;Minimum element: &quot; + findMin(arr1, arr2));<br/><br/>console.log(&quot;Unsorted array: &quot; + generate(arr3, n))<br/>console.log(&quot;Sorted array: &quot; + bubbleSort(arr3))</code></pre>
+        </main>
+    </body>
+</html>

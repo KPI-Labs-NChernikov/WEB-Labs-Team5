@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Oryna | 4 task JS Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code><br/>function bubble(arr) {<br/>    var len = arr.length;<br/>  <br/>    for (var i = 0; i &lt; len ; i++) {<br/>      for(var j = 0 ; j &lt; len - i - 1; j++){ <br/>      if (arr[j] &gt; arr[j + 1]) {<br/>        var temp = arr[j];<br/>        arr[j] = arr[j+1];<br/>        arr[j + 1] = temp;<br/>      }<br/>     }<br/>    }<br/>    return arr;<br/>  }<br/><br/>function compare(arr1, arr2){<br/> let check;<br/>for (let i = 0; i &lt; n; i++) {<br/>    for (let j = 0; j &lt; n; j++) {<br/>        if (arr1[i] == arr2[j]) {<br/>            console.log(arr1[i]);<br/>            check = arr1[i];<br/>            break;<br/>        }       <br/>    }<br/>    if (check == arr1[i]) {<br/>        break;<br/>    }<br/>}<br/>}<br/><br/>let n = prompt(&quot;Enter n&quot;);<br/>console.log(n);<br/>let arr1 = [];<br/>let arr2 = [];<br/><br/>for (let i = 0; i &lt; n; i++) {<br/>    let temp = Math.floor(Math.random()*50);<br/>    arr1.push(temp);<br/>}<br/><br/>for (let i = 0; i &lt; n; i++) {<br/>    let temp = Math.floor(Math.random()*50);<br/>    arr2.push(temp);<br/>}<br/><br/>console.log(arr1);<br/>console.log(arr2);<br/><br/>bubble(arr1);<br/>bubble(arr2);<br/><br/>console.log(arr1);<br/>console.log(arr2);<br/>compare(arr1, arr2);<br/><br/></code></pre>
+        </main>
+    </body>
+</html>
