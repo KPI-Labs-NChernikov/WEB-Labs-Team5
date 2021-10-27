@@ -256,7 +256,7 @@ main {
         left: 8px;
         border-top: 39px solid transparent;
         border-bottom: 40px solid transparent;
-        border-right: 39px solid #4a4410;
+        border-right: 39px solid rgba(0, 0, 0, 0.9);
     }
 }
 
