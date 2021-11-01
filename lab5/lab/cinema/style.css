@@ -266,7 +266,7 @@ main {
     height: 0;
     border-top: 76px solid transparent;
     border-bottom: 75px solid transparent;
-    border-right: 76px solid rgba(0, 0, 0, 0.55);
+    border-right: 76px solid rgba(255, 255, 255, 0.5);
     position: absolute;
     top: 25%;
     margin-left: 46px;
@@ -282,7 +282,7 @@ main {
     height: 0;
     border-top: 59px solid transparent;
     border-bottom: 58px solid transparent;
-    border-right: 59px solid rgba(0, 0, 0, 0.7);
+    border-right: 59px solid rgba(0, 0, 0, 1);
     transition: 0.35s linear; 
 }
 
@@ -319,7 +319,7 @@ main {
         top: 20%;
         border-top: 49px solid transparent;
         border-bottom: 48px solid transparent;
-        border-right: 49px solid rgba(0, 0, 0, 0.55);
+        border-right: 49px solid rgba(255, 255, 255, 0.5);
     }
 
     .big-inner-triange {
@@ -327,7 +327,7 @@ main {
         left: 8px;
         border-top: 39px solid transparent;
         border-bottom: 40px solid transparent;
-        border-right: 39px solid rgba(0, 0, 0, 0.7);
+        border-right: 39px solid rgba(0, 0, 0, 1);
     }
 }
 
