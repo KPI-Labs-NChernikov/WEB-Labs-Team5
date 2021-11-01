@@ -214,7 +214,7 @@ main {
 
 @media (max-width: 1200px) {
     .poster-info {
-        margin-top: 45%;
+        margin-top: 47.5%;
     }
 }
 
@@ -291,10 +291,24 @@ main {
     cursor: pointer;
 }
 
-
 @media (max-width: 1200px) {
     .big-outer-triangle {
-        top: 17.5%;
+        top: 22.5%;
+    }
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+    .big-outer-triangle {
+        top: 15%;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .big-outer-triangle {
+        top: 40%;
+    }
+    .poster-info {
+        margin-top: 40%;
     }
 }
 
