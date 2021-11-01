@@ -1,0 +1,656 @@
+*{margin: 0;} 
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+body {
+    background-color: #151515;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.55);
+    min-height: 66px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    flex-wrap: wrap;
+}
+
+header a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: 0.25s linear;
+}
+
+nav a:hover {
+    text-shadow: 0 0 40px #fff;
+}
+
+nav {
+    display: flex;
+    margin-left: 151px;
+    font-size: 16pt;
+    font-weight: 600;
+    justify-content: center;
+    flex-wrap: nowrap;
+    max-height: 30px;
+}
+
+.nav-item {
+    margin: 0 42px;
+}
+
+.logo {
+    margin-left: 60px;
+    margin-right: 15px;
+    height: 66px;
+    transform: scaleX(1.5);
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;	
+}
+
+.name {
+    margin-left: 31px;
+    font-weight: 800;
+}
+
+.name h1 {
+    font-size: 26pt;
+}
+
+.name h1:hover {
+    color: #ffdd2f;
+}
+
+@media (max-width: 1200px) {
+    header {
+        min-height: 100px;
+    }
+
+    .logo {
+        height: 100px;
+    }
+
+    nav {
+        margin-top: -80px;
+        margin-left: 141px;
+        flex-wrap: wrap;
+        font-size: 14pt;
+    }
+
+    .name {
+        margin-top: -35px;
+    }
+
+    .name h1 {
+        font-size: 24pt;
+    }
+  } 
+
+@media (max-width: 650px) {
+    html, body {
+        overflow-x: hidden;
+    }
+    header {
+        min-height: 100px;
+        flex-direction: column;
+    }
+    nav {
+        margin-top: -5px;
+        margin-left: 0;
+        font-size: 14pt;
+        flex-wrap: wrap;
+    }
+    .logo {
+        display: none;
+    }
+    .name {
+        margin-top: 0;
+        text-align: center;
+    }
+
+    .name h1 {
+        font-size: 24pt;
+    }
+
+    .nav-item {
+        margin: 0 10px;
+    }
+  } 
+
+main {
+    min-height: 500px;
+}
+
+.posters {
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.poster {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    display: none;
+}
+
+.poster.active {
+    display: flex;
+}
+
+#poster-1 {
+    background-image: url("movies/breaking-bad-2008/poster.png");
+}
+
+#poster-2 {
+    background-image: url("movies/dark-waters-2009/poster.webp");
+}
+
+#poster-3 {
+    background-image: url("movies/the-big-short-2016/poster.jpg");
+}
+
+#poster-4 {
+    background-image: url("movies/revolutionary-road-2008/poster.jpg");
+}
+
+#poster-5 {
+    background-image: url("movies/the-children-act-2017/poster.jpg");
+}
+
+.poster-info {
+    width: 100vw;
+    min-height: 35%;
+    margin-top: 32.5%;
+    background-color: rgba(0, 0, 0, 0.55);
+    overflow:hidden;
+}
+
+.poster-info-text {
+    width: 92%;
+    height: 100%;
+    color: #fff;
+    margin: 60px 4%;
+    text-overflow: ellipsis;
+}
+
+.poster-info-text h2 {
+    font-size: 32pt;
+}
+
+.poster-info-text p {
+    font-size: 17pt;
+    font-weight: bold;
+    text-align: justify;
+}
+
+.poster a {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    transition: 0.25s linear;
+}
+
+.poster a:hover {
+    text-shadow: 0 0 40px #fff;
+}
+
+@media (max-width: 1200px) {
+    .poster-info {
+        margin-top: 45%;
+    }
+}
+
+@media (max-width: 650px) {
+    .poster {
+        padding-top: 25px;
+    }
+
+    #poster-1 {
+        background-image: url("movies/breaking-bad-2008/affiche.jpg");
+    }
+
+    #poster-2 {
+        background-image: url("movies/dark-waters-2009/affiche.jpg");
+    }
+    
+    #poster-3 {
+        background-image: url("movies/the-big-short-2016/affiche.jpg");
+    }
+    
+    #poster-4 {
+        background-image: url("movies/revolutionary-road-2008/affiche.jpg");
+    }
+    
+    #poster-5 {
+        background-image: url("movies/the-children-act-2017/affiche.jpg");
+    }
+
+    .poster-info {
+        margin-top: 75%;
+    }
+
+    .poster-info-text {
+        margin: 30px 4%;
+    }
+
+    .poster-info-text h2 {
+        font-size: 26pt;
+    }
+    
+    .poster-info-text p {
+        font-size: 15pt;
+        font-weight: bold;
+    }
+}
+
+.big-outer-triangle {
+    width: 0;
+    height: 0;
+    border-top: 76px solid transparent;
+    border-bottom: 75px solid transparent;
+    border-right: 76px solid rgba(0, 0, 0, 0.55);
+    position: absolute;
+    top: 25%;
+    margin-left: 46px;
+    margin-right: 46px;
+    z-index: 1;
+}
+
+.big-inner-triange {
+    position: relative;
+    top: -59px;
+    left: 12px;
+    width: 0;
+    height: 0;
+    border-top: 59px solid transparent;
+    border-bottom: 58px solid transparent;
+    border-right: 59px solid rgba(0, 0, 0, 0.7);
+    transition: 0.35s linear; 
+}
+
+.big-inner-triange:hover {
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+@media (max-width: 1200px) {
+    .big-outer-triangle {
+        top: 17.5%;
+    }
+}
+
+@media (max-width: 650px) {
+    .big-outer-triangle {
+        margin-left: 16px;
+        margin-right: 16px;
+        top: 20%;
+        border-top: 49px solid transparent;
+        border-bottom: 48px solid transparent;
+        border-right: 49px solid rgba(0, 0, 0, 0.55);
+    }
+
+    .big-inner-triange {
+        top: -39px;
+        left: 8px;
+        border-top: 39px solid transparent;
+        border-bottom: 40px solid transparent;
+        border-right: 39px solid rgba(0, 0, 0, 0.7);
+    }
+}
+
+#triangleRightOuter1 {
+    position: absolute;
+    right: 0;
+    transform: rotate(180deg);
+}
+
+.movies {
+    width: 100vw;
+    min-height: 750px;
+    text-align: center;
+}
+
+.movies h2{
+    color: #ffdd2f;
+    font-size: 28pt;
+}
+
+@media (max-width: 650px) {
+    .movies h2{
+        font-size: 22pt;
+    }
+}
+
+figcaption {
+    width: 210px;
+    height: 16pt;
+    overflow: hidden;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    font-size: 10pt;
+    background-color: #727272;
+}
+
+.affiche {
+    height: 280px;
+    width: 210px;
+    overflow: hidden;
+}
+
+@media (max-width: 650px) {
+    figcaption {
+        width: 165px;
+    }
+    
+    .affiche {
+        height: 220px;
+        width: 165px;
+    }
+}
+
+.affiche img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
+}
+
+.filmBlock a { 
+    display: block; 
+    position: relative; 
+}
+
+.filmBlock a:after 
+{ 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background: rgba(0,0,0,0.5);  
+    opacity: 0;
+    transition: 0.5s linear; 
+}
+
+.filmBlock a:before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    opacity: 0; 
+}
+
+.unitedBlock {
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+figure {
+    border-left: 2px solid #636363;
+    border-right: 2px solid #636363;
+}
+
+.filmBlock a:hover:before,
+.filmBlock a:hover:after { opacity: 1; }
+
+.film-carousel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    background-color: #2b2b2b;
+}
+
+.small-triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 48px 42px 48px 0;
+    border-color: transparent #808080 transparent transparent;
+    transition: 0.35s linear;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+@media (max-width: 650px) {
+    .triangleBlock {
+        width: 165px;
+        border-left: 2px solid transparent;
+        border-right: 2px solid transparent;
+    }
+    .small-triangle {
+        margin-left: 60px;
+        margin-right: 60px;
+    }
+}
+
+#triangleRight2, #triangleRight3 {
+    transform: rotate(180deg);
+}
+
+.small-triangle:hover {
+    cursor: pointer;
+    border-color: transparent #424242 transparent transparent;
+}
+
+footer {
+    width: 100vw;
+}
+
+footer h2 {
+    margin-left: 56px;
+    margin-right: 56px;
+    color: white;
+    font-weight: 800;
+    font-size: 26pt;
+}
+
+.main-info p {
+    margin-left: 90px;
+    margin-right: 90px;
+    font-size: 18pt;
+    color: white;
+    font-weight: 600;
+}
+
+footer h3 {
+    color: #ffdd2f;
+    font-size: 20pt;
+    font-weight: bold;
+}
+
+footer h2 a {
+    color: #ffdd2f !important;
+    text-decoration: none !important;
+}
+
+footer p a {
+    color: #ffdd2f !important;
+    text-decoration: underline;
+}
+
+.footer-info {
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contacts {
+    padding: 20px 35px;
+    width: 41vw;
+    margin-left: 3.125px;
+    border: 1px solid #8a8a8a;
+    border-radius: 15px;
+    text-transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info {
+    padding: 20px 35px;
+    width: 41vw;
+    margin-right: 3.125px;
+    border: 1px solid #8a8a8a;
+    border-radius: 15px;
+    font-weight: 600;
+}
+
+.info a {
+    color: #cccccc !important;
+    text-decoration: none;
+}
+
+.info a:hover {
+    color: #fff !important;
+}
+
+.cabinet-button p {
+    margin: 5px 10px;
+}
+
+.cabinet-button {
+    max-width: fit-content;
+    color: white !important;
+    border: 1px solid #8a8a8a;
+    border-radius: 5px;
+    transform: scaleX(1.2);
+    transition: 0.4s linear;
+}
+
+.cabinet-button:hover {
+    background-color: #fff;
+    border: 1px solid #fff;
+    color: black !important;
+    cursor: pointer;
+}
+
+.buttons {
+    margin-left: 10px;
+    display: flex;
+    gap: 80px;
+    margin-top: -8px;
+}
+
+.contacts a {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-weight: 500;
+}
+
+.contacts img {
+    float: left;
+}
+
+.contact-info-text {
+    margin-left: 8px;
+    float: left;
+}
+
+#phones {
+    margin-top: -5px;
+}
+
+address {
+    color: #fff !important;
+    text-decoration: none !important;
+    font-style: normal;
+    font-weight: 500;
+}
+
+@media (max-width: 650px) {
+    .main-info h2 {
+        font-size: 22pt;
+    }
+    
+    .main-info p {
+        margin-left: 60px;
+        margin-right: 60px;
+        font-size: 14pt;
+        font-weight: 600;
+    }
+    .footer-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .buttons {
+        gap: 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .info {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contacts {
+        margin-left: 0;
+        margin-right: 0;
+        min-width: 200px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contacts img{
+        margin-bottom: 10px;
+    }
+
+    .cabinet-button {
+        margin-left: -10px;
+        min-width: 160px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer-info {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+}
+
+.under-construction {
+    height: 100%;
+    padding-top: 240px;
+    padding-bottom: 240px;
+    font-size: 32pt;
+    text-align: center;
+    color: #fff;
+}
+
+@media (max-width: 650px) {
+    .under-construction {
+        font-size: 20pt;
+    }
+}
+
+.icon {
+    width: 34px;
+}
