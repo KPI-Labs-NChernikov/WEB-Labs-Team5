@@ -86,6 +86,7 @@ function changePosterOnInterval() {
 }
 
 let lastSegmentsNumber;
+let carouselGapSize = 4;
 
 let $newMoviesSlider = $('#carousel-1');
 let $newMovies = $('#carousel-1 .filmBlock');
@@ -146,7 +147,7 @@ function scrollNewMoviesRight() {
     else if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length - 1)
         $('#triangleRight2').addClass('disabled');
     let animationSpeed = 1000;  
-    $newMoviesSlider.animate({'margin-left': '-=' + ($newMovies.eq(currentNewMovieNumber).width() + 4) + 'px'}, animationSpeed, function() {
+    $newMoviesSlider.animate({'margin-left': '-=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
         currentNewMovieNumber++;
         newMovieLock = false;
     });
@@ -163,7 +164,7 @@ function scrollNewMoviesLeft() {
     else if (currentNewMovieNumber == 1)
         $('#triangleLeft2').addClass('disabled');
     let animationSpeed = 1000;  
-    $newMoviesSlider.animate({'margin-left': '+=' + ($newMovies.eq(currentNewMovieNumber).width() + 4) + 'px'}, animationSpeed, function() {
+    $newMoviesSlider.animate({'margin-left': '+=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
         currentNewMovieNumber--;
         newMovieLock = false;
     });
@@ -180,7 +181,7 @@ function scrollShortsRight() {
     else if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length - 1)
         $('#triangleRight3').addClass('disabled');
     let animationSpeed = 1000;  
-    $shortsSlider.animate({'margin-left': '-=' + ($shorts.eq(currentShortNumber).width() + 4) + 'px'}, animationSpeed, function() {
+    $shortsSlider.animate({'margin-left': '-=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
         currentShortNumber++;
         shortLock = false;
     });
@@ -197,7 +198,7 @@ function scrollShortsLeft() {
     else if (currentShortNumber == 1)
         $('#triangleLeft3').addClass('disabled');
     let animationSpeed = 1000;  
-    $shortsSlider.animate({'margin-left': '+=' + ($shorts.eq(currentShortNumber).width() + 4) + 'px'}, animationSpeed, function() {
+    $shortsSlider.animate({'margin-left': '+=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
         currentShortNumber--;
         shortLock = false;
     });
