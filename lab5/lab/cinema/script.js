@@ -206,5 +206,6 @@ function scrollShortsLeft() {
 $(function() {
     changePosterOnInterval();
     window.addEventListener('resize', changeCarousels);
+    window.addEventListener("orientationchange", changeCarousels);
     changeCarousels();
 });
