@@ -477,22 +477,9 @@ figure {
 }
 
 @media (max-width: 650px) {
-    figcaption {
-        width: 180px;
-    }
-    
-    .affiche {
-        height: 240px;
-        width: 180px;
-    }
-
     .carousel-wrapper {
         min-width: calc((180px + 4px) * 1 - 1px);
         max-width: calc((180px + 4px) * 1 - 1px);
-    }
-
-    .full-film-carousel {
-        height: calc(240px + 16pt);
     }
 }
 
