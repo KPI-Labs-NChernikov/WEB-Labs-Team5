@@ -301,6 +301,14 @@ main {
     .big-outer-triangle {
         top: 15%;
     }
+    .big-inner-triange:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .big-inner-triange:active {
+        opacity: 0;
+        cursor: pointer;
+    }
 }
 
 @media (max-height: 500px) and (orientation: landscape) {
@@ -309,6 +317,14 @@ main {
     }
     .poster-info {
         margin-top: 40%;
+    }
+    .big-inner-triange:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .big-inner-triange:active {
+        opacity: 0;
+        cursor: pointer;
     }
 }
 
@@ -328,6 +344,15 @@ main {
         border-top: 39px solid transparent;
         border-bottom: 40px solid transparent;
         border-right: 39px solid rgba(0, 0, 0, 1);
+    }
+
+    .big-inner-triange:hover {
+        opacity: 1;
+        cursor: pointer;
+    }
+    .big-inner-triange:active {
+        opacity: 0;
+        cursor: pointer;
     }
 }
 
@@ -493,6 +518,10 @@ figcaption {
     }
 }
 
+#triangleRight2, #triangleRight3 {
+    transform: rotate(180deg);
+}
+
 .small-triangle {
     width: 0;
     height: 0;
@@ -505,17 +534,6 @@ figcaption {
     z-index: 2;
 }
 
-@media (max-width: 650px) {
-    .small-triangle {
-        margin-left: 30px;
-        margin-right: 30px;
-    }
-}
-
-#triangleRight2, #triangleRight3 {
-    transform: rotate(180deg);
-}
-
 .small-triangle:hover {
     cursor: pointer;
     border-color: transparent #424242 transparent transparent;
@@ -523,6 +541,48 @@ figcaption {
 
 .small-triangle.disabled {
     border-color: transparent #424242 transparent transparent !important;
+}
+
+
+@media (max-width: 650px) {
+    .small-triangle {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+
+    .small-triangle:hover {
+        cursor: pointer;
+        border-color: transparent #808080 transparent transparent;
+    }
+
+    .small-triangle:active {
+        cursor: pointer;
+        border-color: transparent #424242 transparent transparent;
+    }
+}
+
+@media (max-width: 1200px) and (orientation: portrait) {
+    .small-triangle:hover {
+        cursor: pointer;
+        border-color: transparent #808080 transparent transparent;
+    }
+
+    .small-triangle:active {
+        cursor: pointer;
+        border-color: transparent #424242 transparent transparent;
+    }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .small-triangle:hover {
+        cursor: pointer;
+        border-color: transparent #808080 transparent transparent;
+    }
+
+    .small-triangle:active {
+        cursor: pointer;
+        border-color: transparent #424242 transparent transparent;
+    }
 }
 
 footer {
