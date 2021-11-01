@@ -410,11 +410,6 @@ figcaption {
     display: block;
 }
 
-figure {
-    border-left: 2px solid #636363;
-    border-right: 2px solid #636363;
-}
-
 .filmBlock a:hover:before,
 .filmBlock a:hover:after { opacity: 1; }
 
@@ -422,7 +417,6 @@ figure {
     display: flex;
     justify-content: center;
     align-items: center;
-    align-content: center;
     flex-wrap: nowrap;
     background-color: #2b2b2b;
     height: calc(264px + 16pt);
@@ -431,8 +425,8 @@ figure {
 }
 
 .carousel-wrapper {
-    min-width: calc((198px + 4px) * 6 - 5px);
-    max-width: calc((198px + 4px) * 6 - 5px);
+    min-width: calc((198px + 4px) * 6 - 4px);
+    max-width: calc((198px + 4px) * 6 - 4px);
 }
 
 .triangleBlock {
@@ -461,6 +455,8 @@ figure {
     flex-wrap: nowrap;
     position: relative;
     margin-left: 0;
+    gap: 4px;
+    background-color: #636363;
 }
 
 @media (max-width: 1400px) {
@@ -481,8 +477,8 @@ figure {
     }
 
     .carousel-wrapper {
-        min-width: calc((180px + 4px) * 3 - 2px);
-        max-width: calc((180px + 4px) * 3 - 2px);
+        min-width: calc((180px + 4px) * 3 - 4px);
+        max-width: calc((180px + 4px) * 3 - 4px);
     }
 
     .full-film-carousel {
@@ -492,8 +488,8 @@ figure {
 
 @media (max-width: 650px) {
     .carousel-wrapper {
-        min-width: calc((180px + 4px) * 1 - 1px);
-        max-width: calc((180px + 4px) * 1 - 1px);
+        min-width: 180px;
+        max-width: 180px;
     }
 }
 
@@ -724,4 +720,9 @@ address {
 
 .icon {
     width: 34px;
+}
+
+#email {
+    margin-top: 17px;
+    transform: translateY(-50%);
 }
