@@ -169,7 +169,7 @@ function scrollNewMoviesRight() {
     newMovieLock = true;
     if (currentNewMovieNumber == 0)
         $('#triangleLeft2').removeClass('disabled');
-    else if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length - 1)
+    if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length - 1)
         $('#triangleRight2').addClass('disabled');
     let animationSpeed = 1000;  
     $newMoviesSlider.animate({'margin-left': '-=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
@@ -186,7 +186,7 @@ function scrollNewMoviesLeft() {
     newMovieLock = true;
     if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length)
         $('#triangleRight2').removeClass('disabled');
-    else if (currentNewMovieNumber == 1)
+    if (currentNewMovieNumber == 1)
         $('#triangleLeft2').addClass('disabled');
     let animationSpeed = 1000;  
     $newMoviesSlider.animate({'margin-left': '+=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
@@ -203,7 +203,7 @@ function scrollShortsRight() {
     shortLock = true;
     if (currentShortNumber == 0)
         $('#triangleLeft3').removeClass('disabled');
-    else if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length - 1)
+    if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length - 1)
         $('#triangleRight3').addClass('disabled');
     let animationSpeed = 1000;  
     $shortsSlider.animate({'margin-left': '-=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
@@ -220,7 +220,7 @@ function scrollShortsLeft() {
     shortLock = true;
     if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length)
         $('#triangleRight3').removeClass('disabled');
-    else if (currentShortNumber == 1)
+    if (currentShortNumber == 1)
         $('#triangleLeft3').addClass('disabled');
     let animationSpeed = 1000;  
     $shortsSlider.animate({'margin-left': '+=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
