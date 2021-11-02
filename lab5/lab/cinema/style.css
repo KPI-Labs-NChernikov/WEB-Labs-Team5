@@ -484,6 +484,30 @@ figcaption {
     background-color: #636363;
 }
 
+
+@media (min-width: 1800px) {
+    figcaption {
+        width: 12.9vw;
+        height: 1vw;
+        font-size: 0.7vw;
+        line-height: 1vw;
+    }
+    
+    .affiche {
+        height: 17.2vw;
+        width: 12.9vw;
+    }
+
+    .carousel-wrapper {
+        min-width: calc((12.9vw + 4px) * 6 - 4px);
+        max-width: calc((12.9vw + 4px) * 6 - 4px);
+    }
+
+    .full-film-carousel {
+        height: calc(17.2vw + 1vw);
+    }
+}
+
 @media (max-width: 1400px) {
     .carousel-wrapper {
         min-width: calc((198px + 4px) * 5 - 4px);
@@ -543,6 +567,13 @@ figcaption {
     border-color: transparent #424242 transparent transparent !important;
 }
 
+@media (min-width: 1800px) {
+    .small-triangle {
+        border-width: 2.57vw 2.25vw 2.57vw 0;
+        margin-left: 1.25vw;
+        margin-right: 1.25vw;
+    }
+}
 
 @media (max-width: 650px) {
     .small-triangle {
