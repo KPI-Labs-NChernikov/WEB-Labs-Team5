@@ -78,10 +78,26 @@ function scrollPosterLeft() {
     }
 }
 
+let timerId;
+
+function isMoreThanAHalfOfPosterInViewport() {
+    const rect = $postersSlider.get(0).getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    let isInViewport = (rect.bottom >= windowHeight / 2);
+
+    if (!isInViewport)
+        stop = true;
+    else
+        stop = false;
+}
+
+let stop;
+
 function changePosterOnInterval() {
     const delay = 20000;
-    let timerId = setInterval(function() {
-        scrollPosterRight();
+    timerId = setInterval(function() {
+        if (!stop)
+            scrollPosterRight();     
     }, delay);
 }
 
@@ -206,6 +222,9 @@ function scrollShortsLeft() {
 
 $(function() {
     changePosterOnInterval();
+    isMoreThanAHalfOfPosterInViewport();
+    window.addEventListener('resize', isMoreThanAHalfOfPosterInViewport);
+    window.addEventListener('scroll', isMoreThanAHalfOfPosterInViewport);
     window.addEventListener('resize', changeCarousels);
     window.addEventListener("orientationchange", changeCarousels);
     changeCarousels();
