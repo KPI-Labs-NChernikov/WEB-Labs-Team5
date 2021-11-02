@@ -550,14 +550,6 @@ figcaption {
     border-color: transparent #424242 transparent transparent !important;
 }
 
-@media (min-width: 1800px) {
-    .small-triangle {
-        border-width: 2.57vw 2.25vw 2.57vw 0;
-        margin-left: 1.25vw;
-        margin-right: 1.25vw;
-    }
-}
-
 @media (max-width: 650px) {
     .small-triangle {
         margin-left: 30px;
