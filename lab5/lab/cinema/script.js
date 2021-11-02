@@ -81,7 +81,7 @@ function scrollPosterLeft() {
 function isMoreThanAHalfOfPosterInViewport() {
     const rect = $postersSlider.get(0).getBoundingClientRect();
     const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
-    let isInViewport = (rect.bottom >= windowHeight / 2);
+    let isInViewport = (rect.bottom > windowHeight / 2);
     return isInViewport;
 }
 
