@@ -109,6 +109,7 @@ let shortLock = false;
 var isPhone = window.matchMedia("(max-width: 650px)");
 var isTablet = window.matchMedia("(max-width: 1200px)");
 var isNotUltrawide = window.matchMedia("(max-width: 1400px)");
+var isUltrawide = window.matchMedia("(min-width: 1800px)");
 
 function getCarouselSegmentsNumber() {
     let number = 6;
@@ -118,6 +119,8 @@ function getCarouselSegmentsNumber() {
         number = 3;
     else if (isNotUltrawide.matches)
         number = 5;
+    else if (isUltrawide.matches)
+        number = 8;
     return number;
 }
 
