@@ -87,10 +87,8 @@ function isMoreThanAHalfOfPosterInViewport() {
 
 function changePosterOnInterval() {
     const delay = 20000;
-    let stop;
     var timerId = setInterval(function() {
-        stop = !isMoreThanAHalfOfPosterInViewport();
-        if (!stop)
+        if (isMoreThanAHalfOfPosterInViewport())
             scrollPosterRight();     
     }, delay);
 }
