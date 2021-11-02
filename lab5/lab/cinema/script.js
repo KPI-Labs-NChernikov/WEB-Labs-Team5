@@ -131,10 +131,24 @@ function changeCarousels() {
         currentShortNumber = 0;
         $('#triangleLeft2').addClass('disabled');
         $('#triangleLeft3').addClass('disabled');
-        if ($newMovies.length == getCarouselSegmentsNumber())
+        if ($newMovies.length <= getCarouselSegmentsNumber())
+        {
+            $newMoviesSlider.css({'justify-content' : 'center'});
             $('#triangleRight2').addClass('disabled');
-        if ($shorts.length == getCarouselSegmentsNumber())
+        }
+        else 
+        {
+            $newMoviesSlider.css({'justify-content' : 'start'});
+        }
+        if ($shorts.length <= getCarouselSegmentsNumber())
+        {
+            $shortsSlider.css({'justify-content' : 'center'});
             $('#triangleRight3').addClass('disabled');
+        }
+        else 
+        {
+            $shortsSlider.css({'justify-content' : 'start'});
+        }
         $newMoviesSlider.css({'margin-left' : '0'});
         $shortsSlider.css({'margin-left' : '0'});
     }
