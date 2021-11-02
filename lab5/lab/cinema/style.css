@@ -484,7 +484,7 @@ figcaption {
     background-color: #636363;
 }
 
-@media (min-width: 1800px) {
+@media (min-width: 1801px) {
     .carousel-wrapper {
         min-width: calc((198px + 4px) * 8 - 4px);
         max-width: calc((198px + 4px) * 8 - 4px);
