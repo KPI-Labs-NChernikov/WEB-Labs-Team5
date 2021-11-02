@@ -438,6 +438,27 @@ figcaption {
 .filmBlock a:hover:before,
 .filmBlock a:hover:after { opacity: 1; }
 
+@media (max-width: 1200px) and (orientation: portrait) {
+    .filmBlock a:hover:before,
+    .filmBlock a:hover:after { opacity: 0; }
+    .filmBlock a:active:before,
+    .filmBlock a:active:after { opacity: 1; }
+}
+
+@media (max-height: 500px) and (orientation: landscape) {
+    .filmBlock a:hover:before,
+    .filmBlock a:hover:after { opacity: 0; }
+    .filmBlock a:active:before,
+    .filmBlock a:active:after { opacity: 1; }
+}
+
+@media (max-width: 650px) {
+    .filmBlock a:hover:before,
+    .filmBlock a:hover:after { opacity: 0; }
+    .filmBlock a:active:before,
+    .filmBlock a:active:after { opacity: 1; }
+}
+
 .full-film-carousel {
     display: flex;
     justify-content: center;
