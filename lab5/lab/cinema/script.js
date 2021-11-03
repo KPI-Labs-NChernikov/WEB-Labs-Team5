@@ -134,7 +134,7 @@ function getCarouselSegmentsNumber() {
     return number;
 }
 
-function changeCarousels() {
+function changeCarousels(carousels) {
     if (lastSegmentsNumber != getCarouselSegmentsNumber())
     {
         lastSegmentsNumber = getCarouselSegmentsNumber();
@@ -197,12 +197,12 @@ function scrollCarouselLeft(carousel) {
 
 $(function() {
     changePosterOnInterval();
-    window.addEventListener('resize', changeCarousels);
-    window.addEventListener("orientationchange", changeCarousels);
-    changeCarousels();
+    window.addEventListener('resize', () => {changeCarousels(carousels);});
+    window.addEventListener("orientationchange",  () => {changeCarousels(carousels);});
+    changeCarousels(carousels);
     for (let carousel of carousels)
     {
-        carousel.arrowLeft.click(() => {scrollCarouselLeft(carousel)});
-        carousel.arrowRight.click(() => {scrollCarouselRight(carousel)});
+        carousel.arrowLeft.click(() => {scrollCarouselLeft(carousel);});
+        carousel.arrowRight.click(() => {scrollCarouselRight(carousel);});
     };
 });
