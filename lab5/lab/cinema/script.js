@@ -114,6 +114,8 @@ let $shortsArrowRight = $('#triangleRight3');
 let shortsCarousel = {slider: $shortsSlider, elements: $shorts, arrowLeft: $shortsArrowLeft,
      arrowRight: $shortsArrowRight, current: currentShortNumber, lock: shortLock};
 
+let carousels = [newMoviesCarousel, shortsCarousel];
+
 var isPhone = window.matchMedia("(max-width: 650px)");
 var isTablet = window.matchMedia("(max-width: 1200px)");
 var isNotWide = window.matchMedia("(max-width: 1400px)");
@@ -136,7 +138,6 @@ function changeCarousels() {
     if (lastSegmentsNumber != getCarouselSegmentsNumber())
     {
         lastSegmentsNumber = getCarouselSegmentsNumber();
-        let carousels = [newMoviesCarousel, shortsCarousel];
         for (let carousel of carousels)
         {
             carousel.arrowRight.removeClass('disabled');
@@ -199,8 +200,9 @@ $(function() {
     window.addEventListener('resize', changeCarousels);
     window.addEventListener("orientationchange", changeCarousels);
     changeCarousels();
-    $newMoviesArrowLeft.click(() => {scrollCarouselLeft(newMoviesCarousel)});
-    $newMoviesArrowRight.click(() => {scrollCarouselRight(newMoviesCarousel)});
-    $shortsArrowLeft.click(() => {scrollCarouselLeft(shortsCarousel)});
-    $shortsArrowRight.click(() => {scrollCarouselRight(shortsCarousel)});
+    for (let carousel of carousels)
+    {
+        carousel.arrowLeft.click(() => {scrollCarouselLeft(carousel)});
+        carousel.arrowRight.click(() => {scrollCarouselRight(carousel)});
+    };
 });
