@@ -100,11 +100,19 @@ let $newMoviesSlider = $('#carousel-1');
 let $newMovies = $('#carousel-1 .filmBlock');
 let currentNewMovieNumber = 0;
 let newMovieLock = false;
+let $newMoviesArrowLeft = $('#triangleLeft2');
+let $newMoviesArrowRight = $('#triangleRight2');
+let newMoviesCarousel = {slider: $newMoviesSlider, elements: $newMovies, arrowLeft: $newMoviesArrowLeft, 
+    arrowRight: $newMoviesArrowRight, current: currentNewMovieNumber, lock: newMovieLock};
 
 let $shortsSlider = $('#carousel-2');
 let $shorts = $('#carousel-2 .filmBlock');
 let currentShortNumber = 0;
 let shortLock = false;
+let $shortsArrowLeft = $('#triangleLeft3');
+let $shortsArrowRight = $('#triangleRight3');
+let shortsCarousel = {slider: $shortsSlider, elements: $shorts, arrowLeft: $shortsArrowLeft,
+     arrowRight: $shortsArrowRight, current: currentShortNumber, lock: shortLock};
 
 var isPhone = window.matchMedia("(max-width: 650px)");
 var isTablet = window.matchMedia("(max-width: 1200px)");
@@ -127,33 +135,24 @@ function getCarouselSegmentsNumber() {
 function changeCarousels() {
     if (lastSegmentsNumber != getCarouselSegmentsNumber())
     {
-        $('#triangleRight2').removeClass('disabled');
-        $('#triangleRight3').removeClass('disabled');
         lastSegmentsNumber = getCarouselSegmentsNumber();
-        currentNewMovieNumber = 0;
-        currentShortNumber = 0;
-        $('#triangleLeft2').addClass('disabled');
-        $('#triangleLeft3').addClass('disabled');
-        if ($newMovies.length <= getCarouselSegmentsNumber())
+        let carousels = [newMoviesCarousel, shortsCarousel];
+        for (let carousel of carousels)
         {
-            $newMoviesSlider.css({'justify-content' : 'center'});
-            $('#triangleRight2').addClass('disabled');
+            carousel.arrowRight.removeClass('disabled');
+            carousel.current = 0;
+            carousel.arrowLeft.addClass('disabled');
+            if (carousel.elements.length <= lastSegmentsNumber)
+            {
+                carousel.slider.css({'justify-content' : 'center'});
+                carousel.arrowRight.addClass('disabled');
+            }
+            else 
+            {
+                carousel.slider.css({'justify-content' : 'start'});
+            }
+            carousel.slider.css({'margin-left' : '0'});
         }
-        else 
-        {
-            $newMoviesSlider.css({'justify-content' : 'start'});
-        }
-        if ($shorts.length <= getCarouselSegmentsNumber())
-        {
-            $shortsSlider.css({'justify-content' : 'center'});
-            $('#triangleRight3').addClass('disabled');
-        }
-        else 
-        {
-            $shortsSlider.css({'justify-content' : 'start'});
-        }
-        $newMoviesSlider.css({'margin-left' : '0'});
-        $shortsSlider.css({'margin-left' : '0'});
     }
 }
 
@@ -161,71 +160,37 @@ function getPrevCarouselNumber(current, length) {
     return current < 1 ? length - 1 : current - 1;
 }
 
-function scrollNewMoviesRight() {
-    if (newMovieLock)
+function scrollCarouselRight(carousel) {
+    if (carousel.lock)
         return;
-    else if (currentNewMovieNumber + getCarouselSegmentsNumber() > $newMovies.length - 1)
+    else if (carousel.current + getCarouselSegmentsNumber() > carousel.elements.length - 1)
         return;
-    newMovieLock = true;
-    if (currentNewMovieNumber == 0)
-        $('#triangleLeft2').removeClass('disabled');
-    if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length - 1)
-        $('#triangleRight2').addClass('disabled');
+    carousel.lock = true;
+    if (carousel.current == 0)
+        carousel.arrowLeft.removeClass('disabled');
+    if (carousel.current + getCarouselSegmentsNumber() == carousel.elements.length - 1)
+        carousel.arrowRight.addClass('disabled');
     let animationSpeed = 1000;  
-    $newMoviesSlider.animate({'margin-left': '-=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
-        currentNewMovieNumber++;
-        newMovieLock = false;
+    carousel.slider.animate({'margin-left': '-=' + (carousel.elements.eq(carousel.current).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
+        carousel.current++;
+        carousel.lock = false;
     });
 }
 
-function scrollNewMoviesLeft() {
-    if (newMovieLock)
+function scrollCarouselLeft(carousel) {
+    if (carousel.lock)
         return;
-    else if (currentNewMovieNumber < 1)
+    else if (carousel.current < 1)
         return;
-    newMovieLock = true;
-    if (currentNewMovieNumber + getCarouselSegmentsNumber() == $newMovies.length)
-        $('#triangleRight2').removeClass('disabled');
-    if (currentNewMovieNumber == 1)
-        $('#triangleLeft2').addClass('disabled');
+    carousel.lock = true;
+    if (carousel.current + getCarouselSegmentsNumber() == carousel.elements.length)
+        carousel.arrowRight.removeClass('disabled');
+    if (carousel.current == 1)
+        carousel.arrowLeft.addClass('disabled');
     let animationSpeed = 1000;  
-    $newMoviesSlider.animate({'margin-left': '+=' + ($newMovies.eq(currentNewMovieNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
-        currentNewMovieNumber--;
-        newMovieLock = false;
-    });
-}
-
-function scrollShortsRight() {
-    if (shortLock)
-        return;
-    else if (currentShortNumber + getCarouselSegmentsNumber() > $shorts.length - 1)
-        return;
-    shortLock = true;
-    if (currentShortNumber == 0)
-        $('#triangleLeft3').removeClass('disabled');
-    if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length - 1)
-        $('#triangleRight3').addClass('disabled');
-    let animationSpeed = 1000;  
-    $shortsSlider.animate({'margin-left': '-=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
-        currentShortNumber++;
-        shortLock = false;
-    });
-}
-
-function scrollShortsLeft() {
-    if (shortLock)
-        return;
-    else if (currentShortNumber < 1)
-        return;
-    shortLock = true;
-    if (currentShortNumber + getCarouselSegmentsNumber() == $shorts.length)
-        $('#triangleRight3').removeClass('disabled');
-    if (currentShortNumber == 1)
-        $('#triangleLeft3').addClass('disabled');
-    let animationSpeed = 1000;  
-    $shortsSlider.animate({'margin-left': '+=' + ($shorts.eq(currentShortNumber).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
-        currentShortNumber--;
-        shortLock = false;
+    carousel.slider.animate({'margin-left': '+=' + (carousel.elements.eq(carousel.current).width() + carouselGapSize) + 'px'}, animationSpeed, function() {
+        carousel.current--;
+        carousel.lock = false;
     });
 }
 
@@ -234,4 +199,8 @@ $(function() {
     window.addEventListener('resize', changeCarousels);
     window.addEventListener("orientationchange", changeCarousels);
     changeCarousels();
+    $newMoviesArrowLeft.click(() => {scrollCarouselLeft(newMoviesCarousel)});
+    $newMoviesArrowRight.click(() => {scrollCarouselRight(newMoviesCarousel)});
+    $shortsArrowLeft.click(() => {scrollCarouselLeft(shortsCarousel)});
+    $shortsArrowRight.click(() => {scrollCarouselRight(shortsCarousel)});
 });
