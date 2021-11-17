@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>&lt;?php<br/>$pickedDate = $_POST[&quot;date&quot;];<br/>$socialCredit = $_POST[&quot;SocialCredit&quot;];<br/>if (empty($socialCredit))<br/>    $socialCredit = &quot;0&quot;;<br/>echo &quot;Повідомлення отримано! &lt;br&gt;&quot;;<br/>echo &quot;Ви зробили добрих справ: &lt;b&gt;&quot;. $socialCredit . &quot;&lt;/b&gt;&lt;br&gt;&quot;;<br/>echo &quot;Обрана дата: &lt;b&gt;&quot;. $pickedDate . &quot;&lt;/b&gt;&lt;br&gt;&quot;;<br/>echo &quot;Сьогоднішня дата: &lt;b&gt;&quot;. date(&quot;d/m/Y&quot;) . &quot;&lt;/b&gt;&quot;;<br/>?&gt;</code></pre>
+        </main>
+    </body>
+</html>

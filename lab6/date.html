@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Звіти | Бригада №5</title>
         <link rel="stylesheet" type="text/css" href="../style.css">
-        <link rel="stylesheet" type="text/css" href="../labs-general/descriptionstyle.css">
+        <link rel="stylesheet" type="text/css" href="../labs-general/theorystyle.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet"> 
@@ -103,55 +103,35 @@
                 </div>
             </aside>
             <div class="lab">
-                <h2>ПОСТАНОВКА ЗАДАЧІ <br>
-                    Лабораторної роботи №6</h2>
-                <div class="main-description">
-                    <p>
-                        <strong>Тема:</strong> WEB-СЕРВЕРИ ТА ПРИНЦИПИ ЇХ РОБОТИ З КОРИСТУВАЧЕМ. СЕРВЕРНІ WEB-ЗАСТОСУВАННЯ.                        
-                        <br>
-                        <strong>Мета:</strong>
-                        придбати практичні навички встановлення та конфігурування WEB-сервера, встановлення та налаштування Apache.
+                <div class="theory">
+                    <h1>Зворотній зв'язок. Відображення дати</h1>
+                    <h2>Пояснення:</h2>
+                    <p>При відправці форми, викликається сторінка action.php, на якій відбувається обробка результатів:<br>
+                        Користувачеві кажуть, що його повідомлення отримано, а також виводить обрані у формі дані: кількість зроблених добрих справ, обрана дата
+                        та сьогоднішня дата
                     </p>
-                    <h3>ХІД ВИКОНАННЯ РОБОТИ</h3>
-                    <p>
-                        <ol>
-                            <li>
-                                У звітному HTML-документі розмістити  тему та  мету  лабораторної роботи №6, посилання на ГітХаб
-                            </li>
-                            <li>
-                                Користуючись документацією бібліотеки https://jqueryui.com/ додати до сайту 3 динамічних елементи на свій розсуд 
-                                (елементи не повинні повторюватись з лаби 5)
-                            </li>
-                            <li>
-                                Вибрати емулятор WEB-серверу за власним бажанням.Створити WEB-вузол на комп’ютер. 
-                                (Як один із прикладів встановлення  - дивитись далі).
-                            </li>
-                            <li>
-                                У звітному HTML-документі детально розписати послідовність установки WEB-серверу зі скріншотами. 
-                            </li>
-                            <li>
-                                На WEB-вузол завантажити всі HTML-документі. Звернулись до них з запитом для перегляду. 
-                            </li>
-                            <li>
-                                Перейменувати розширення .html на .php . Відкрити і з’ясувати, що інформація відображається на екрані.
-                            </li>
-                            <li>
-                                Визначити для файлів вузла  кодировку utf-8  у самих  файлах (meta - charset), в httpd.conf (apache), php.ini. 
-                            </li>
-                            <li>
-                                Перевірити коректність відображення інформації.
-                            </li>
-                            <li>
-                                Для форми зворотнього зв’язку відобразити (на відправку повідомлення) інформацію, що повідомлення отримано. 
-                                Також відобразити <strong>дату</strong>. 
-                            </li>
-                        </ol>
-                    </p>
-                    <h3>Місцезнаходження результатів роботи:</h3>
-                    <p><a href="https://kpi-labs-nchernikov.github.io/WEB-labs-team-5/lab6/main.html" target="_blank">Звіт</a></p>
-                    <p><a href="https://github.com/KPI-Labs-NChernikov/WEB-labs-team-5/tree/master/lab6" target="_blank">Звіт (гітхаб з файлами)</a></p>
-                    <p><a href="https://github.com/KPI-Labs-NChernikov/WEB-labs-team-5/tree/master/lab6/lab/localhost-files" target="_blank">Гітхаб з файлами з localhost</a></p>
+                    <h2>Код PHP:</h2>
+                    <iframe class="code" src="lab/task9/php.html"></iframe>
                     <br>
+                    <h2>Код HTML:</h2>
+                    <iframe class="code" src="lab/task2/html.html"></iframe>
+                    <br>
+                    <h2>Код JS:</h2>
+                    <iframe class="code" src="lab/task2/js.html"></iframe>
+                    <br>
+                    <h2>Скріншоти:</h2>
+                    <h3>Введення даних у форму:</h3>
+                    <div class="code">
+                        <img src="lab/task9/screenshot1.png" alt="Скріншот введення даних у форму">
+                    </div>
+                    <br>
+                    <h3>Отримання форми:</h3>
+                    <div class="code">
+                        <img src="lab/task9/screenshot2.png" alt="Скріншот результату відправки форми">
+                    </div>
+                    <br>
+                    <br>
+                </div>
                 </div>
                 <br>
             </div>

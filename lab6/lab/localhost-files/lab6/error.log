@@ -1,0 +1,29 @@
+[Tue Nov 16 19:59:50.279612 2021] [mpm_winnt:notice] [pid 7464:tid 796] AH00455: Apache/2.4.51 (Win64) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 16 19:59:50.280623 2021] [mpm_winnt:notice] [pid 7464:tid 796] AH00456: Apache Lounge VS16 Server built: Oct  7 2021 16:27:02
+[Tue Nov 16 19:59:50.280623 2021] [core:notice] [pid 7464:tid 796] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Tue Nov 16 19:59:50.287614 2021] [mpm_winnt:notice] [pid 7464:tid 796] AH00418: Parent: Created child process 4776
+[Tue Nov 16 19:59:50.444473 2021] [mpm_winnt:notice] [pid 4776:tid 712] AH00354: Child: Starting 64 worker threads.
+[Tue Nov 16 20:30:59.948675 2021] [mpm_winnt:notice] [pid 7464:tid 796] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Nov 16 20:31:01.964195 2021] [mpm_winnt:notice] [pid 4776:tid 712] AH00364: Child: All worker threads have exited.
+[Tue Nov 16 20:31:01.990745 2021] [mpm_winnt:notice] [pid 7464:tid 796] AH00430: Parent: Child process 4776 exited successfully.
+[Tue Nov 16 20:31:02.657697 2021] [mpm_winnt:notice] [pid 12368:tid 640] AH00455: Apache/2.4.51 (Win64) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 16 20:31:02.657697 2021] [mpm_winnt:notice] [pid 12368:tid 640] AH00456: Apache Lounge VS16 Server built: Oct  7 2021 16:27:02
+[Tue Nov 16 20:31:02.657697 2021] [core:notice] [pid 12368:tid 640] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Tue Nov 16 20:31:02.663316 2021] [mpm_winnt:notice] [pid 12368:tid 640] AH00418: Parent: Created child process 12124
+[Tue Nov 16 20:31:02.940918 2021] [mpm_winnt:notice] [pid 12124:tid 592] AH00354: Child: Starting 64 worker threads.
+[Tue Nov 16 20:52:49.037404 2021] [mpm_winnt:notice] [pid 12368:tid 640] AH00422: Parent: Received shutdown signal -- Shutting down the server.
+[Tue Nov 16 20:52:51.049903 2021] [mpm_winnt:notice] [pid 12124:tid 592] AH00364: Child: All worker threads have exited.
+[Tue Nov 16 20:52:51.080707 2021] [mpm_winnt:notice] [pid 12368:tid 640] AH00430: Parent: Child process 12124 exited successfully.
+[Tue Nov 16 20:52:51.758940 2021] [mpm_winnt:notice] [pid 12912:tid 640] AH00455: Apache/2.4.51 (Win64) PHP/8.0.12 configured -- resuming normal operations
+[Tue Nov 16 20:52:51.758940 2021] [mpm_winnt:notice] [pid 12912:tid 640] AH00456: Apache Lounge VS16 Server built: Oct  7 2021 16:27:02
+[Tue Nov 16 20:52:51.758940 2021] [core:notice] [pid 12912:tid 640] AH00094: Command line: 'C:\\Apache24\\bin\\httpd.exe -d C:/Apache24'
+[Tue Nov 16 20:52:51.766121 2021] [mpm_winnt:notice] [pid 12912:tid 640] AH00418: Parent: Created child process 15440
+[Tue Nov 16 20:52:51.919130 2021] [mpm_winnt:notice] [pid 15440:tid 580] AH00354: Child: Starting 64 worker threads.
+[Tue Nov 16 22:45:14.029907 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64931] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:16.143365 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64931] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:33.007762 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64933] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:36.257160 2021] [php:error] [pid 15440:tid 1084] [client ::1:64955] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:42.469710 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64960] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:42.898507 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64961] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:45:43.095010 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64961] script 'C:/localhost/lab6/index.php' not found or unable to stat
+[Tue Nov 16 22:46:01.700317 2021] [php:error] [pid 15440:tid 1084] [client 127.0.0.1:64962] script 'C:/localhost/lab6/index.php' not found or unable to stat
