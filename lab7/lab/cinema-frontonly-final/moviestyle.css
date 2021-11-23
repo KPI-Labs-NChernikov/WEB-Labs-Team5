@@ -190,6 +190,11 @@
 }
 
 @media (max-width: 650px) {
+    .session-timetable {
+        margin-left: 26px;
+        margin-right: 26px;
+    }
+
     .session-timetable h2 {
         font-size: 22pt;
         text-align: center;
