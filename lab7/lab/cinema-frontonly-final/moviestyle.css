@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
+
+.poster-image {
+    position: relative;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+    z-index: -1;
+}
+
+.poster-fade {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 1) 80%, #151515 100%);
+    width: 100%;
+    z-index: -1;
+    overflow-y: visible;
+    display: flex;
+    flex-direction: row;
+    gap: 6%;
+    padding: 140px 7%;
+    padding-bottom: 100px;
+}
+
+.affiche-main {
+    width: 22%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.affiche-main img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+    z-index: 0;
+}
+
+.movie-description {
+    z-index: 0;
+    padding-top: 2em;
+    width: 50%;
+    text-align: justify;
+}
+
+.age-restriction {
+    color: #fff;
+}
+
+.movie-description h2 {
+    color: #FFDD2F;
+    font-size: 32pt;
+    font-weight: 800;
+}
+
+.movie-description p {
+    color: #fff;
+    font-size: 14pt;
+    font-weight: bold;
+}
+
+.filmrate-table {
+    color: #fff;
+    font-size: 14pt;
+    font-weight: bold;
+    text-align: left;
+    width: 100%;
+}
+
+.filmrate-table td {
+    vertical-align: top;
+}
+
+.filmrate-left {
+    color: #CCCCCC;
+    width: 40%;
+    padding-right: 50px;
+}
+
+@media (max-width: 650px) {
+    .poster-fade {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .movie-description {
+        width: 80%;
+        text-align: justify;
+    }
+
+    .affiche-main {
+        width: 300px;
+        height: 400px;
+        overflow: hidden;
+        z-index: 0;
+    }
+
+    .movie-description h2 {
+        font-size: 24pt;
+    }
+    
+    .movie-description p {
+        font-size: 12pt;
+    }
+
+    .filmrate-table {
+        font-size: 10pt;
+        width: 100%;
+    }
+
+    .filmrate-left {
+        width: 50%;
+    }
+
+    .filmrate-star {
+        width: 22px;
+    }
+}
+
+.session-timetable {
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-bottom: 56px;
+}
+
+.session-timetable h2 {
+    color: #FFDD2F;
+    font-weight: 800;
+    font-size: 26pt;
+}
+
+.timetable {
+    display: flex;
+    flex-direction: column;
+    gap: 36px;
+    flex-wrap: wrap;
+}
+
+.tt-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 80px;
+}
+
+.tt-times {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timetable button {
+    display: block;
+    width: 115px;
+    height: 53px;
+    background: #1D1D1D;
+    box-shadow: -5px -5px 10px rgba(143, 143, 143, 0.2), 5px 5px 10px rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    border-color: #1D1D1D;
+    font-weight: 800;
+    font-size: 16pt;
+    line-height: 30px;
+    letter-spacing: 0.01em;
+    color: #FFDD2F;
+    cursor: pointer;
+}
+
+.timetable button:active {
+    box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.78), inset 0px -5px 7px rgba(117, 117, 117, 0.25);
+}
+
+.tt-date {
+    width: 236px;
+    height: 70px;
+    background: #1D1D1D;
+    box-shadow: inset 0px 5px 7px rgba(0, 0, 0, 0.78), inset 0px -5px 7px rgba(117, 117, 117, 0.25);
+    border-radius: 15px;
+    font-weight: 800;
+    font-size: 20pt;
+    letter-spacing: 0.01em;
+    color: #CCCCCC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 650px) {
+    .session-timetable h2 {
+        font-size: 22pt;
+        text-align: center;
+    }
+
+    .tt-row {
+        gap: 40px;
+    }
+
+    .timetable button {
+        width: 110px;
+        height: 50px;
+    }
+
+    .timetable {
+        justify-content: center;
+    }
+
+    .tt-row {
+        justify-content: center;
+    }
+
+    .tt-times {
+        justify-content: center;
+    }
+}
