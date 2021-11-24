@@ -1,1 +1,1 @@
-console.log(carouselGapSize);
+autosize($('#new-review-text'));

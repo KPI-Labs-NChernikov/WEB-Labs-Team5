@@ -13,6 +13,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="../../carousels.js"></script>
         <script defer src="../../moviescript.js"></script>
+        <script src="../../autosize/dist/autosize.min.js"></script>
         <style>
             .poster-image {
                 background-image: url(poster.svg);
@@ -129,6 +130,80 @@
                             </div>
                         </div>
                     </form>
+                </div>
+                <div class="reviews-container">
+                    <div class="reviews">
+                        <br><br><h2>відгуки глядачів</h2><br>
+                        <div class="existing-reviews">
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-userinfo">
+                                        <div class="user-avatar">
+                                            <img src="../../icons/PersonCircle.svg" alt="default avatar">
+                                        </div>
+                                        <h3>Світлана</h3>
+                                    </div>
+                                    <div class="review-rating">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        Найкращий фільм жахів з тих, що я дивилася. Оригінальний сюжет та чудово підібрані актори
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="review">
+                                <div class="review-header">
+                                    <div class="review-userinfo">
+                                        <div class="user-avatar">
+                                            <img src="../../icons/PersonCircle.svg" alt="default avatar">
+                                        </div>
+                                        <h3>Віталій</h3>
+                                    </div>
+                                    <div class="review-rating">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/greystar.svg" alt="Сіра зірка" class="review-star">
+                                        <img src="../../icons/greystar.svg" alt="Сіра зірка" class="review-star">
+                                    </div>
+                                </div>
+                                <div class="review-text">
+                                    <p>
+                                        Перша частина була значно краща. Сюжет досить дивний, зв’язок між першим та другим фільмом незрозумілий, враження не дуже
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <form method="post" class="add-review">
+                            <div class="upper-add-review">
+                                <div class="megaphone">
+                                    <img src="../../icons/Megaphone.svg" alt="Рупор">
+                                </div>
+                                <textarea id="new-review-text" placeholder="Додайте свій коментар" autocomplete="off"></textarea>
+                            </div>
+                            <div class="lower-add-review">
+                                <div class="rating-area">
+                                    <input type="radio" id="star-5" name="rating" value="5" autocomplete="off" required>
+                                    <label for="star-5" title="Оцінка «5»"></label>	
+                                    <input type="radio" id="star-4" name="rating" value="4" autocomplete="off">
+                                    <label for="star-4" title="Оцінка «4»"></label>    
+                                    <input type="radio" id="star-3" name="rating" value="3" autocomplete="off">
+                                    <label for="star-3" title="Оцінка «3»"></label>  
+                                    <input type="radio" id="star-2" name="rating" value="2" autocomplete="off">
+                                    <label for="star-2" title="Оцінка «2»"></label>    
+                                    <input type="radio" id="star-1" name="rating" value="1" autocomplete="off">
+                                    <label for="star-1" title="Оцінка «1»"></label>
+                                </div>
+                                <input id="send-review-btn" type="submit" value="Надіслати">
+                            </div>
+                        </form>
+                    </div>
                 </div>
         </main>
         <footer>
