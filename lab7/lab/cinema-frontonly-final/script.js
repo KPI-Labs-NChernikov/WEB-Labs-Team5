@@ -95,21 +95,17 @@ function changePosterOnInterval() {
 
 let $newMoviesSlider = $('#carousel-1');
 let $newMovies = $('#carousel-1 .filmBlock');
-let currentNewMovieNumber = 0;
-let newMovieLock = false;
 let $newMoviesArrowLeft = $('#triangleLeft2');
 let $newMoviesArrowRight = $('#triangleRight2');
 let newMoviesCarousel = {slider: $newMoviesSlider, elements: $newMovies, arrowLeft: $newMoviesArrowLeft, 
-    arrowRight: $newMoviesArrowRight, current: currentNewMovieNumber, lock: newMovieLock};
+    arrowRight: $newMoviesArrowRight};
 
 let $shortsSlider = $('#carousel-2');
 let $shorts = $('#carousel-2 .filmBlock');
-let currentShortNumber = 0;
-let shortLock = false;
 let $shortsArrowLeft = $('#triangleLeft3');
 let $shortsArrowRight = $('#triangleRight3');
 let shortsCarousel = {slider: $shortsSlider, elements: $shorts, arrowLeft: $shortsArrowLeft,
-     arrowRight: $shortsArrowRight, current: currentShortNumber, lock: shortLock};
+     arrowRight: $shortsArrowRight};
 
 let carousels = [newMoviesCarousel, shortsCarousel];
 

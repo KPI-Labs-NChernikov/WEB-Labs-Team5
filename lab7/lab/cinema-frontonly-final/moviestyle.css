@@ -497,5 +497,25 @@
         margin-left: 26px;
         padding-right: 26px;
     }
-    
+}
+
+.movies h2 {
+    text-align: left;
+    margin-left: 56px;
+    margin-right: 56px;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.movies {
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 650px) {
+    .movies h2 {
+        text-align: center;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

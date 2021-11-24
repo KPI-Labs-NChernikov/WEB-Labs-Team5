@@ -132,7 +132,6 @@ nav {
 
 .movies {
     width: 100vw;
-    min-height: 750px;
     text-align: center;
 }
 
@@ -293,7 +292,7 @@ figcaption {
     }
 }
 
-#triangleRight2, #triangleRight3 {
+#triangleRight, #triangleRight2, #triangleRight3 {
     transform: rotate(180deg);
 }
 

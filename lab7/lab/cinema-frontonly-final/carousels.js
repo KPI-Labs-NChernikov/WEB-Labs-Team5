@@ -81,6 +81,11 @@ function scrollCarouselLeft(carousel) {
 }
 
 function addCarouselsListeners(carousels) {
+    for (let carousel of carousels) 
+    {
+        carousel.lock = false;
+        carousel.current = 0;
+    };
     window.addEventListener('resize', () => {changeCarousels(carousels);});
     window.addEventListener("orientationchange",  () => {changeCarousels(carousels);});
     changeCarousels(carousels);
