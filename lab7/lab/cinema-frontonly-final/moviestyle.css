@@ -424,9 +424,9 @@
 
 #send-review-btn:active {
     border-style: solid;
-    background: black;
-    border-color: black;
-    color: #FFDD2F;
+    background: black !important;
+    border-color: black !important;
+    color: #FFDD2F !important;
 }
 
 @media (max-width: 650px) {
