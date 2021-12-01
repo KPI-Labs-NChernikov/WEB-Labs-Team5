@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>CREATE DATABASE audiolibrary DEFAULT CHARACTER SET utf8;<br/>USE audiolibrary;<br/><br/>CREATE TABLE genre (<br/>    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br/>    name VARCHAR(50) NOT NULL UNIQUE KEY<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE author (<br/>    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br/>    first_name VARCHAR(50) NOT NULL,<br/>    last_name VARCHAR(50) NULL<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE speaker (<br/>    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br/>    first_name VARCHAR(50) NOT NULL,<br/>    last_name VARCHAR(50) NULL<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE audiobook (<br/>    id MEDIUMINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,<br/>    name VARCHAR(100) NOT NULL,<br/>    length TIME NOT NULL,<br/>    year SMALLINT UNSIGNED NOT NULL,<br/>    description TEXT NULL,<br/>    reference TEXT NULL<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE genre_audiobook (<br/>	audiobook_id MEDIUMINT UNSIGNED NOT NULL,<br/>    genre_id SMALLINT UNSIGNED NOT NULL,<br/>    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    FOREIGN KEY (genre_id) REFERENCES genre (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    UNIQUE KEY (audiobook_id, genre_id)<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE author_audiobook (<br/>	audiobook_id MEDIUMINT UNSIGNED NOT NULL,<br/>    author_id SMALLINT UNSIGNED NOT NULL,<br/>    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    FOREIGN KEY (author_id) REFERENCES author (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    UNIQUE KEY (audiobook_id, author_id)<br/>) ENGINE = InnoDB;<br/><br/>CREATE TABLE speaker_audiobook (<br/>	audiobook_id MEDIUMINT UNSIGNED NOT NULL,<br/>    speaker_id SMALLINT UNSIGNED NOT NULL,<br/>    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    FOREIGN KEY (speaker_id) REFERENCES speaker (id) ON DELETE CASCADE ON UPDATE CASCADE,<br/>    UNIQUE KEY (audiobook_id, speaker_id)<br/>) ENGINE = InnoDB;<br/></code></pre>
+        </main>
+    </body>
+</html>

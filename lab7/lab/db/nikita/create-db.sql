@@ -1,0 +1,52 @@
+CREATE DATABASE audiolibrary DEFAULT CHARACTER SET utf8;
+USE audiolibrary;
+
+CREATE TABLE genre (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL UNIQUE KEY
+) ENGINE = InnoDB;
+
+CREATE TABLE author (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE speaker (
+    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE audiobook (
+    id MEDIUMINT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    length TIME NOT NULL,
+    year SMALLINT UNSIGNED NOT NULL,
+    description TEXT NULL,
+    reference TEXT NULL
+) ENGINE = InnoDB;
+
+CREATE TABLE genre_audiobook (
+	audiobook_id MEDIUMINT UNSIGNED NOT NULL,
+    genre_id SMALLINT UNSIGNED NOT NULL,
+    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (genre_id) REFERENCES genre (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE KEY (audiobook_id, genre_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE author_audiobook (
+	audiobook_id MEDIUMINT UNSIGNED NOT NULL,
+    author_id SMALLINT UNSIGNED NOT NULL,
+    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (author_id) REFERENCES author (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE KEY (audiobook_id, author_id)
+) ENGINE = InnoDB;
+
+CREATE TABLE speaker_audiobook (
+	audiobook_id MEDIUMINT UNSIGNED NOT NULL,
+    speaker_id SMALLINT UNSIGNED NOT NULL,
+    FOREIGN KEY (audiobook_id) REFERENCES audiobook (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (speaker_id) REFERENCES speaker (id) ON DELETE CASCADE ON UPDATE CASCADE,
+    UNIQUE KEY (audiobook_id, speaker_id)
+) ENGINE = InnoDB;

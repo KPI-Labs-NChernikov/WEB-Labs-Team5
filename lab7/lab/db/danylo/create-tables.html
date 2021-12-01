@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>CREATE TABLE Train <br/>( <br/>    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL ,<br/>    DispatchStation VARCHAR(50) NOT NULL,<br/>    ArrivalStation VARCHAR(50) NOT NULL,<br/>    NumberOfCars INT NOT NULL,<br/>    DepartureTime VARCHAR(5) NOT NULL,<br/>    ArrivalTime VARCHAR(5) NOT NULL<br/>);<br/><br/>CREATE TABLE Schedule <br/>( <br/>    id SMALLINT UNSIGNED AUTO_INCREMENT PRIMARY KEY NOT NULL,<br/>    TrainNumber SMALLINT UNSIGNED NOT NULL,<br/>    DateOfDeparture VARCHAR(10) NOT NULL,<br/>    NumberOfTickets INT NOT NULL,<br/>    TicketPrice INT NOT NULL,<br/>    FOREIGN KEY fkTrain(TrainNumber)<br/>    REFERENCES Train(Id)<br/>    ON UPDATE CASCADE<br/>    ON DELETE RESTRICT<br/>);</code></pre>
+        </main>
+    </body>
+</html>

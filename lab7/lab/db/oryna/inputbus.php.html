@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>&lt;!DOCTYPE html&gt;<br/>&lt;html lang=&quot;en&quot;&gt;<br/>&lt;head&gt;<br/>    &lt;meta charset=&quot;UTF-8&quot;&gt;<br/>    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;<br/>    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;<br/>    &lt;title&gt;Document&lt;/title&gt;<br/>&lt;/head&gt;<br/>&lt;body&gt;<br/>&lt;form method=&quot;POST&quot;&gt;<br/>       <br/>            &lt;h2&gt; Введіть прізвище та ім&#39;я водія<br/>                &lt;p&gt; &lt;input class=&quot;text-field&quot; type = &quot;name&quot; name=&quot;name&quot;&gt;&lt;/h2&gt;<br/>            &lt;/p&gt;<br/>            &lt;p&gt;&lt;input id=&quot;send-button&quot; type=&quot;submit&quot; value = &quot;Send&quot;&gt;&lt;/p&gt;<br/>    &lt;/form&gt;<br/>    &lt;?php<br/>              $db_host = &quot;laba7&quot;;<br/>              $db_user = &quot;root&quot;;<br/>              $db_password = &quot;&quot;;<br/>              $connection = @mysqli_connect(&#39;localhost&#39;, &#39;root&#39;, &#39;&#39;) or die (&quot;Could not connect&quot;);<br/>              mysqli_select_db($connection, &quot;laba7&quot;);<br/>              $name = $_POST[&quot;name&quot;];<br/>              $len_name = strlen($name);<br/>              if($len_name&gt;0)<br/>              {<br/>                $query = &quot;INSERT IGNORE INTO bus (driver) VALUES (&#39;$name&#39;)&quot;;<br/>                if(mysqli_query($connection,$query))<br/>                {<br/>                }else{<br/>                  echo mysqli_error($connection);<br/>                }<br/>              }<br/>            ?&gt;<br/><br/>    &lt;?php<br/>						  $db_host = &quot;laba7&quot;;<br/>							$db_user = &quot;root&quot;;<br/>							$db_password = &quot;&quot;;<br/>							$connection = @mysqli_connect(&#39;localhost&#39;, &#39;root&#39;, &#39;&#39;) or die (&quot;Could not connect&quot;);<br/>							mysqli_select_db($connection, &quot;laba7&quot;);<br/>							$arrivalStation = $_post[&quot;arrivalStation&quot;];<br/>							$departureStation = $_post[&quot;departureStation&quot;];<br/>							$busId = $_post[&quot;busId&quot;];<br/>							$query = &quot;INSERT IGNORE INTO route (ArrivalStation, DepartureStation, BusID) VALUES (&#39;$arrivalStation&#39;, &#39;$departureStation&#39;, &#39;$busId&#39;)&quot;;<br/>							<br/>						?&gt;<br/><br/>&lt;/body&gt;<br/>&lt;/html&gt;<br/></code></pre>
+        </main>
+    </body>
+</html>
