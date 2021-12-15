@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>using System;<br/>using System.Collections.Generic;<br/>using System.ComponentModel.DataAnnotations.Schema;<br/>using System.Linq;<br/>using System.Text;<br/>using System.Threading.Tasks;<br/><br/>namespace Data.Entities<br/>{<br/>    public class Movie<br/>    {<br/>        public int Id { get; set; }<br/><br/>        [Column(TypeName = &quot;nvarchar(150)&quot;)]<br/>        public string Name { get; set; }<br/><br/>        [Column(TypeName = &quot;nvarchar(150)&quot;)]<br/>        public string NameRU { get; set; }<br/><br/>        [Column(TypeName = &quot;nvarchar(150)&quot;)]<br/>        public string NameENG { get; set; }<br/><br/>        public short AgeRestriction { get; set; }<br/><br/>        public short Year { get; set; }<br/><br/>        public string Description { get; set; }<br/><br/>        public string DescriptionRU { get; set; }<br/><br/>        public string DescriptionENG { get; set; }<br/><br/>        public short Length { get; set; }<br/><br/>        public short Rating { get; set; }<br/><br/>        [Column(TypeName = &quot;nvarchar(150)&quot;)]<br/>        public string LinkToPoster { get; set; }<br/><br/>        [Column(TypeName = &quot;nvarchar(150)&quot;)]<br/>        public string LinkToAffiche { get; set; }<br/><br/>        public int CountryId { get; set; }<br/>        public Country Country { get; set; }<br/><br/><br/>        public ICollection&lt;Review&gt; Reviews { get; set; }<br/><br/>        public ICollection&lt;Genre&gt; Genres { get; set; }<br/><br/>        public ICollection&lt;Director&gt; Directors { get; set; }<br/><br/>        public ICollection&lt;Actor&gt; Actors { get; set; }<br/><br/>        public ICollection&lt;ScenarioWriter&gt; ScenarioWriters { get; set; }<br/><br/>        public ICollection&lt;User&gt; Users { get; set; }<br/><br/>        public ICollection&lt;Session&gt; Sessions { get; set; }<br/>    }<br/>}<br/></code></pre>
+        </main>
+    </body>
+</html>

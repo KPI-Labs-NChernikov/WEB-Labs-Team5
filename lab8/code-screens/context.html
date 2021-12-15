@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>using Data.Entities;<br/>using Microsoft.AspNetCore.Identity.EntityFrameworkCore;<br/>using Microsoft.EntityFrameworkCore;<br/><br/>namespace Data<br/>{<br/>    public class ApplicationContext : IdentityDbContext&lt;User&gt;<br/>    {<br/>        public DbSet&lt;Actor&gt; Actors { get; set; }<br/><br/>        public DbSet&lt;Country&gt; Countries { get; set; }<br/><br/>        public DbSet&lt;Director&gt; Directors { get; set; }<br/><br/>        public DbSet&lt;Genre&gt; Genres { get; set; }<br/><br/>        public DbSet&lt;Movie&gt; Movies { get; set; }<br/><br/>        public DbSet&lt;Review&gt; Reviews { get; set; }<br/><br/>        public DbSet&lt;Row&gt; Rows { get; set; }<br/><br/>        public DbSet&lt;ScenarioWriter&gt; ScenarioWriters { get; set; }<br/><br/>        public DbSet&lt;Seat&gt; Seats { get; set; }<br/><br/>        public DbSet&lt;Session&gt; Sessions { get; set; }<br/><br/>        public DbSet&lt;SessionSeat&gt; SessionSeats { get; set; }<br/><br/>        public ApplicationContext(DbContextOptions&lt;ApplicationContext&gt; options) : base(options)<br/>        {<br/>            Database.EnsureCreated();<br/>        }<br/><br/>        protected override void OnModelCreating(ModelBuilder builder)<br/>        {<br/>            base.OnModelCreating(builder);<br/>            builder.Entity&lt;SessionSeat&gt;()<br/>            .HasKey(s =&gt; new { s.SessionId, s.SeatId });<br/>            builder.Entity&lt;Review&gt;()<br/>            .HasIndex(s =&gt; new { s.MovieId, s.UserId }).IsUnique();<br/>            builder.Entity&lt;Country&gt;()<br/>            .HasIndex(s =&gt; s.Name).IsUnique();<br/>            builder.Entity&lt;Genre&gt;()<br/>            .HasIndex(s =&gt; s.Name).IsUnique();<br/>            builder.Entity&lt;Movie&gt;()<br/>            .HasIndex(s =&gt; s.LinkToAffiche).IsUnique();<br/>            builder.Entity&lt;Movie&gt;()<br/>            .HasIndex(s =&gt; s.LinkToPoster).IsUnique();<br/>        }<br/>    }<br/>}<br/></code></pre>
+        </main>
+    </body>
+</html>

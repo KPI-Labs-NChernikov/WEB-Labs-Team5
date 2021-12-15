@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>private readonly CookieOptions cookieOptions = new()<br/>        {<br/>            MaxAge = new TimeSpan(182, 15, 0, 0)<br/>        };<br/><br/>        protected void AnalyzeLang(string lang)<br/>        {<br/>            var key = &quot;lang&quot;;<br/>            if (Request.Cookies.ContainsKey(key))<br/>            {<br/>                if (lang is null)<br/>                    lang = Request.Cookies[key];<br/>                else if (lang != Request.Cookies[key])<br/>                {<br/>                    Response.Cookies.Delete(key);<br/>                    Response.Cookies.Append(key, lang, cookieOptions);<br/>                }<br/>            }<br/>            else<br/>            {<br/>                if (lang is null)<br/>                    lang = &quot;ukr&quot;;<br/>                Response.Cookies.Append(key, lang, cookieOptions);<br/>            }<br/>            ViewBag.Lang = lang;<br/>        }</code></pre>
+        </main>
+    </body>
+</html>

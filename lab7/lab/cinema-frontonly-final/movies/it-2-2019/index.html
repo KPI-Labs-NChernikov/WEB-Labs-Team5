@@ -50,9 +50,7 @@
                 <div class="poster-image">
                     <div class="poster-fade">
                         <div class="affiche-main">
-                            <a href="https://www.youtube.com/watch?v=iyVfuutDa-s" target="_blank">
                                 <img src="affiche.jpeg" alt="ВОНО 2 Афіша">
-                            </a>
                         </div>
                         <div class="movie-description">
                             <h2>воно 2 (2019) <span class="age-restriction">18+</span></h2><br>
@@ -137,19 +135,26 @@
                         <div class="existing-reviews">
                             <div class="review">
                                 <div class="review-header">
-                                    <div class="review-userinfo">
+                                    <div class="left-info">
+                                        <div class="review-userinfo">
                                         <div class="user-avatar">
                                             <img src="../../icons/PersonCircle.svg" alt="default avatar">
                                         </div>
                                         <h3>Світлана</h3>
+                                        </div>
+                                        <div class="review-rating">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
+                                        </div>
                                     </div>
-                                    <div class="review-rating">
-                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
-                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
-                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
-                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
-                                        <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
-                                    </div>
+                                    <form>
+                                    <button class="rcbtn">
+                                    <img class="red-cross" src="../../icons/redCross.svg" alt="red cross">
+                                    </button>
+                                </form>
                                 </div>
                                 <div class="review-text">
                                     <p>
@@ -159,19 +164,26 @@
                             </div>
                             <div class="review">
                                 <div class="review-header">
-                                    <div class="review-userinfo">
+                                    <div class="left-info">
+                                        <div class="review-userinfo">
                                         <div class="user-avatar">
                                             <img src="../../icons/PersonCircle.svg" alt="default avatar">
                                         </div>
                                         <h3>Віталій</h3>
-                                    </div>
-                                    <div class="review-rating">
+                                        </div>
+                                        <div class="review-rating">
                                         <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
                                         <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
                                         <img src="../../icons/yellowstar.svg" alt="Жовта зірка" class="review-star">
                                         <img src="../../icons/greystar.svg" alt="Сіра зірка" class="review-star">
                                         <img src="../../icons/greystar.svg" alt="Сіра зірка" class="review-star">
+                                        </div>
                                     </div>
+                                    <form>
+                                        <button class="rcbtn">
+                                        <img class="red-cross" src="../../icons/redCross.svg" alt="red cross">
+                                        </button>
+                                    </form>
                                 </div>
                                 <div class="review-text">
                                     <p>
@@ -185,7 +197,7 @@
                                 <div class="megaphone">
                                     <img src="../../icons/Megaphone.svg" alt="Рупор">
                                 </div>
-                                <textarea id="new-review-text" placeholder="Додайте свій коментар" autocomplete="off"></textarea>
+                                <textarea id="new-review-text" placeholder="Додайте свій коментар" autocomplete="off" maxlength="400"></textarea>
                             </div>
                             <div class="lower-add-review">
                                 <div class="rating-area">
@@ -199,8 +211,10 @@
                                     <label for="star-2" title="Оцінка «2»"></label>    
                                     <input type="radio" id="star-1" name="rating" value="1" autocomplete="off">
                                     <label for="star-1" title="Оцінка «1»"></label>
+                                    <div><p class="left-chars"><span class="rchars" id="rchars">0/400</span> символів</p></div>
                                 </div>
-                                <input id="send-review-btn" type="submit" value="Надіслати">
+                                
+                                <button id="send-review-btn" type="submit">Надіслати</button>
                             </div>
                         </form>
                     </div>

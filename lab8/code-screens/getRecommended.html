@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>        public async Task&lt;IEnumerable&lt;MovieModel&gt;&gt; GetRecommendedAsync(string userId)<br/>        {<br/>            var user = await _context.Users.Include(u =&gt; u.Genres).SingleOrDefaultAsync(u =&gt; u.Id == userId);<br/>            if (user is null)<br/>                return new List&lt;MovieModel&gt;();<br/>            var movies = _context.Movies<br/>                .Include(m =&gt; m.Genres).AsEnumerable();<br/>            movies = movies.Where(m =&gt; m.Genres.Intersect(user.Genres).Any())<br/>                .OrderByDescending(m =&gt; m.Id);<br/>            return await Task.Run(() =&gt; _mapper.Map&lt;IEnumerable&lt;MovieModel&gt;&gt;(movies));<br/>        }</code></pre>
+        </main>
+    </body>
+</html>

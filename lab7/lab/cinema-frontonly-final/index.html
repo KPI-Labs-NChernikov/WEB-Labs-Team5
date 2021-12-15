@@ -12,6 +12,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="carousels.js"></script>
+        <script defer src="mainscript.js"></script>
         <script defer src="script.js"></script>
     </head>
     <body>
@@ -50,7 +51,7 @@
                 </div>
             </div>
                 <div class="posters">
-                <div class="poster active" id="poster-1">
+                <div class="poster" id="poster-1">
                     <div class="poster-info">
                         <div class="poster-info-text">
                             <a href="movies/breaking-bad-2008/index.html"><h2>Пуститися берега (2008)</h2></a><br>
@@ -358,13 +359,20 @@
                     <p><a href="privacy-policy.html">Політика конфіденційності</a></p>
                     <br><br>
                     <h3>Особистий кабінет</h3><br>
-                    <div class="buttons">
-                        <div class="cabinet-button" id="login">
-                            <p>ВХІД</p>
-                        </div>
-                        <div class="cabinet-button" id="register">
+                    <div class="lower-block">
+                        <div class="buttons">
+                            <div class="cabinet-button" id="login">
+                                <p>ВХІД</p>
+                            </div>
+                            <div class="cabinet-button" id="register">
                             <p>РЕЄСТРАЦІЯ</p>
+                            </div>
                         </div>
+                        <form class="languages" id="languages" method="GET">
+                            <input type="radio" name="lang" id="ukr" value="ukr"><label class="lang-col" for="ukr"><img src="icons/ua.webp" alt="ukrainian"></label>
+                            <input type="radio" name="lang" id="ru" value="ru"><label class="lang-col" for="ru"><img src="icons/ru.webp" alt="russian"></label>
+                            <input type="radio" name="lang" id="eng" value="eng"><label class="lang-col" for="eng"><img src="icons/eng.webp" alt="english"></label>
+                        </form>
                     </div>
                 </div>
             </div>

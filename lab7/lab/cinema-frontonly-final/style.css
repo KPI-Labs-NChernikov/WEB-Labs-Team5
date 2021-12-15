@@ -442,6 +442,8 @@ footer p a {
     border-radius: 5px;
     transform: scaleX(1.2);
     transition: 0.4s linear;
+    display: flex;
+    align-items: center;
 }
 
 .cabinet-button:hover {
@@ -558,4 +560,53 @@ address {
 #email {
     margin-top: 17px;
     transform: translateY(-50%);
+}
+
+.lower-block {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.lang-col {
+    display: block;
+  }
+  
+  .languages input{
+    display: none;
+  }
+  
+  .languages label{
+    position: relative;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    border-radius: 15px;
+    border: 2px solid transparent;
+  }
+  
+  .languages input:checked + label{
+    border-color: #ffdd2f;
+  }
+
+  .languages {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: right;
+      gap: 10px;
+  }
+  
+  .lang-col {
+    overflow: hidden;
+    height: 25px;
+}
+
+.lang-col img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center center;
 }

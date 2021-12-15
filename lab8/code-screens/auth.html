@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>[HttpPost]<br/>        public async Task&lt;IActionResult&gt; Login(LoginViewModel model)<br/>        {<br/>            if (User.Identity.IsAuthenticated)<br/>                return RedirectToAction(&quot;Index&quot;, &quot;Cabinet&quot;);<br/>            if (ModelState.IsValid)<br/>            {<br/>                var result =<br/>                    await _signInManager.PasswordSignInAsync(model.Email, model.Password, false, false);<br/>                if (result.Succeeded)<br/>                {<br/>                    var user = _userManager.Users.SingleOrDefault(u =&gt; u.Email == model.Email);<br/>                    await _logger.LoginUserAsync(user);<br/>                    return RedirectToAction(&quot;Index&quot;, &quot;Cabinet&quot;);<br/>                }<br/>                else<br/>                {<br/>                    AnalyzeLang(null);<br/>                    var lang = ViewBag.Lang;<br/>                    string errorMessage;<br/>                    if (lang == &quot;eng&quot;)<br/>                    {<br/>                        errorMessage = &quot;E-mail or/and password are not correct&quot;;<br/>                    }<br/>                    else if (lang == &quot;ru&quot;)<br/>                    {<br/>                        errorMessage = &quot;Неправильная почта и/или пароль&quot;;<br/>                    }<br/>                    else<br/>                    {<br/>                        errorMessage = &quot;Неправильна електронна пошта та/або пароль&quot;;<br/>                    }<br/>                    ModelState.AddModelError(&quot;LoginError&quot;, errorMessage);<br/>                }<br/>            }<br/>            model.Password = null;<br/>            return View(model);<br/>        }</code></pre>
+        </main>
+    </body>
+</html>
