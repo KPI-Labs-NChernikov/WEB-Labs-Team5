@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>&lt;?php<br/>    $name = $_POST[&#39;name&#39;];<br/>    $description = isset($_POST[&#39;description&#39;]) ? $_POST[&#39;description&#39;] : null;<br/>    $time = $_POST[&#39;time&#39;];<br/><br/>    if (file_exists(&#39;tasks.xml&#39;)) {<br/>        $xml = simplexml_load_file(&#39;tasks.xml&#39;);<br/>    } else {<br/>        $dom = new DOMDocument(&#39;1.0&#39;,&#39;UTF-8&#39;);<br/>        $dom-&gt;formatOutput = true;<br/><br/>        $root = $dom-&gt;createElement(&#39;root&#39;);<br/>        $dom-&gt;appendChild($root);<br/><br/>        $tasksElement = $dom-&gt;createElement(&#39;tasks&#39;);<br/>        $root-&gt;appendChild($tasksElement);<br/><br/>        $lastId = $dom-&gt;createElement(&#39;last_id&#39;, 0);<br/>        $root-&gt;appendChild($lastId);<br/><br/>        $xml = simplexml_import_dom($dom);<br/>    }<br/><br/>    $task = $xml-&gt;tasks-&gt;addChild(&#39;task&#39;);<br/><br/>    $id = $xml-&gt;last_id + 1;<br/><br/>    $xml-&gt;last_id = $id;<br/><br/>    $tasks = $xml-&gt;tasks-&gt;children();<br/><br/>    $task-&gt;addAttribute(&#39;id&#39;, $id);<br/><br/>    $taskName = $task-&gt;addChild(&#39;name&#39;, $name);<br/><br/>    if ($description != null)<br/>        $taskDescription = $task-&gt;addChild(&#39;description&#39;, $description);<br/><br/>    $taskTime = $task-&gt;addChild(&#39;time&#39;, $time);<br/><br/>    $xml-&gt;asXml(&#39;tasks.xml&#39;);<br/><br/>    echo json_encode(array(&quot;id&quot;=&gt;$id, &quot;name&quot;=&gt;$name, &quot;description&quot;=&gt;$description, &quot;time&quot;=&gt;$time));<br/>?&gt;</code></pre>
+        </main>
+    </body>
+</html>

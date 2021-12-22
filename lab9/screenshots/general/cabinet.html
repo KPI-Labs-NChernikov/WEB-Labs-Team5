@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>public async Task&lt;IActionResult&gt; Index(string lang)<br/>        {<br/>            AnalyzeLang(lang);<br/>            lang = ViewBag.Lang;<br/>            var user = await _userManager.GetUserAsync(User);<br/>            var model = new UserViewModel()<br/>            {<br/>                Name = user.FirstName + &quot; &quot; + user.LastName,<br/>                Email = user.Email,<br/>                PhoneNumber = user.PhoneNumber,<br/>                Genres = string.Join(&quot;, &quot;, (await _genreService.GetUserGenresAsync(user.Id)).Select(g =&gt; _genreService.GetNameForLang(g, lang))),<br/>        };<br/>            var recommended = (await _movieService.GetRecommendedAsync(user.Id))<br/>                .Select(m =&gt; new MovieCarouselViewModel()<br/>                {<br/>                    Id = m.Id,<br/>                    LinkToAffiche = m.LinkToAffiche.Replace(&#39;\\&#39;, &#39;/&#39;),<br/>                    Name = _movieService.GetNameForLang(m, lang)<br/>                });<br/>            model.Recommended = recommended;<br/>            return View(model);<br/>        }</code></pre>
+        </main>
+    </body>
+</html>

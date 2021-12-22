@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Planner</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"> 
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <a href="index.html"><h1>Planner</h1></a>
+        </header>
+        <main>
+            <div class="add-task-wrapper">
+                <h2><img src="pen.svg" alt="pen" class="icon">Add task</h2><br>
+                <div class="form-wrapper">
+                    
+                <form class="add-task" method="POST" id="add" onsubmit="return add()">
+                    <label for="name">Name:</label><br><input type="text" name="name" id="name" required>
+                    <br><br>
+                    <label for="description">Description:</label><br>
+                    <textarea id="description" name="description"></textarea>
+                    <br><br>
+                    <label for="time">Time:</label><br><input type="time" id="time" name="time" required>
+                    <br><br>
+                    <button type="submit" class="small-btn submit-btn">Submit</button>
+                </form>
+                </div>
+                </div>
+            <div class="tasks-wrapper">
+            <h2><img src="task.svg" alt="pen" class="icon">Tasks</h2><br>
+            <div id="add-task-notify"></div>
+            <div class="tasks" id="tasks">
+
+            </div>
+        </div>
+        </main>
+    </body>
+</html>

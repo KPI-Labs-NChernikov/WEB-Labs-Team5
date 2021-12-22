@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Code screen</title>
+    </head>
+    <body>
+        <main>
+            <pre><code>[HttpGet]<br/>        public async Task&lt;IActionResult&gt; IndexAsync(string lang)<br/>        {<br/>            AnalyzeLang(lang);<br/>            lang = ViewBag.Lang;<br/>            var posters = _movieService<br/>                .GetAll()<br/>                .Take(5)<br/>                .Select(m =&gt; new MovieReducedViewModel()<br/>                {<br/>                    Id = m.Id,<br/>                    LinkToAffiche = m.LinkToAffiche.Replace(&#39;\\&#39;, &#39;/&#39;),<br/>                    LinkToPoster = m.LinkToPoster.Replace(&#39;\\&#39;, &#39;/&#39;),<br/>                    Name = _movieService.GetNameForLang(m, lang) + &quot; (&quot; + m.Year + &quot;)&quot;,<br/>                    Description = _movieService.GetDescriptionForLang(m, lang)<br/>                }<br/>                ).ToArray();<br/>            var comingSoon = (await _movieService.GetFeatureFilmsAsync())<br/>                .Select(m =&gt; new MovieCarouselViewModel() <br/>                {<br/>                    Id = m.Id,<br/>                    LinkToAffiche = m.LinkToAffiche.Replace(&#39;\\&#39;, &#39;/&#39;),<br/>                    Name = _movieService.GetNameForLang(m, lang)<br/>                });<br/>            var shorts = (await _movieService.GetShortsAsync())<br/>                .Select(m =&gt; new MovieCarouselViewModel()<br/>                {<br/>                    Id = m.Id,<br/>                    LinkToAffiche = m.LinkToAffiche.Replace(&#39;\\&#39;, &#39;/&#39;),<br/>                    Name = _movieService.GetNameForLang(m, lang)<br/>                }); ;<br/>            var model = new MainPageViewModel()<br/>            {<br/>                Posters = posters,<br/>                ComingSoon = comingSoon,<br/>                Shorts = shorts<br/>            };<br/>            return View(model);<br/>        }</code></pre>
+        </main>
+    </body>
+</html>
